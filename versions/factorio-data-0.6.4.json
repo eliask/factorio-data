@@ -1,0 +1,4811 @@
+{
+  "raw": {
+    "ammo": {
+      "basic-bullet-magazine": {
+        "ammo_type": {
+          "category": "bullet",
+          "damage": 2,
+          "target_explosion": "explosion-gunshot",
+          "type": "instant"
+        },
+        "flags": {
+          "1": "goes-to-main-inventory"
+        },
+        "group": "combat",
+        "icon": "__base__/graphics/icons/basic-bullet-magazine.png",
+        "magazine_size": 10,
+        "name": "basic-bullet-magazine",
+        "order": "f-a-a",
+        "stack_size": 100,
+        "type": "ammo"
+      }
+    },
+    "ammo-category": {
+      "bullet": {
+        "name": "bullet",
+        "type": "ammo-category"
+      },
+      "electric": {
+        "name": "electric",
+        "type": "ammo-category"
+      },
+      "flame-thrower": {
+        "name": "flame-thrower",
+        "type": "ammo-category"
+      },
+      "rocket": {
+        "name": "rocket",
+        "type": "ammo-category"
+      }
+    },
+    "ammo-turret": {
+      "basic-turret": {
+        "collision_box": {
+          "1": {
+            "1": -0.4,
+            "2": -0.4
+          },
+          "2": {
+            "1": 0.4,
+            "2": 0.4
+          }
+        },
+        "dying_explosion": "huge-explosion",
+        "flags": {
+          "1": "placeable-enemy",
+          "2": "player-creation"
+        },
+        "icon": "__base__/graphics/icons/basic-turret.png",
+        "inventory_size": 1,
+        "max_health": 200,
+        "name": "basic-turret",
+        "pictures": {
+          "direction_count": 5,
+          "filename": "__base__/graphics/entity/basic-turret/basic-turret.png",
+          "frame_height": 82,
+          "frame_width": 108,
+          "priority": "medium",
+          "shift": {
+            "1": 0,
+            "2": -0.5
+          }
+        },
+        "selection_box": {
+          "1": {
+            "1": -0.6,
+            "2": -0.9
+          },
+          "2": {
+            "1": 0.6,
+            "2": 0.6
+          }
+        },
+        "shooting_parameters": {
+          "ammo_category": "bullet",
+          "cooldown": 6,
+          "damage_modifier": 2.5,
+          "explosion": "explosion-gunshot",
+          "range": 15,
+          "sound": {
+            "1": {
+              "filename": "__base__/sound/gunshot.wav",
+              "volume": 0.3
+            }
+          }
+        },
+        "type": "ammo-turret"
+      },
+      "gun-turret": {
+        "base_picture": {
+          "filename": "__base__/graphics/entity/gun-turret/gun-turret-base.png",
+          "height": 28,
+          "priority": "high",
+          "shift": {
+            "1": 0,
+            "2": 0.475
+          },
+          "width": 43
+        },
+        "collision_box": {
+          "1": {
+            "1": -0.4,
+            "2": -0.9
+          },
+          "2": {
+            "1": 0.4,
+            "2": 0.9
+          }
+        },
+        "dying_explosion": "huge-explosion",
+        "extension_animation": {
+          "axially_symmetrical": false,
+          "direction_count": 4,
+          "filename": "__base__/graphics/entity/gun-turret/gun-turret-extension.png",
+          "frame_count": 5,
+          "frame_height": 102,
+          "frame_width": 171,
+          "priority": "medium",
+          "shift": {
+            "1": 1.34375,
+            "2": 0.09999999999999998
+          }
+        },
+        "extension_speed": 0.05,
+        "flags": {
+          "1": "placeable-player",
+          "2": "player-creation"
+        },
+        "icon": "__base__/graphics/icons/gun-turret.png",
+        "inventory_size": 1,
+        "max_health": 200,
+        "minable": {
+          "mining_time": 0.5,
+          "result": "gun-turret"
+        },
+        "name": "gun-turret",
+        "pictures": {
+          "axially_symmetrical": false,
+          "direction_count": 64,
+          "filename": "__base__/graphics/entity/gun-turret/gun-turret.png",
+          "frame_height": 107,
+          "frame_width": 178,
+          "line_length": 8,
+          "priority": "medium",
+          "shift": {
+            "1": 1.34375,
+            "2": 0.13124999999999998
+          }
+        },
+        "rotation_speed": 0.01,
+        "selection_box": {
+          "1": {
+            "1": -0.5,
+            "2": -1
+          },
+          "2": {
+            "1": 0.5,
+            "2": 1
+          }
+        },
+        "shooting_parameters": {
+          "ammo_category": "bullet",
+          "cooldown": 6,
+          "damage_modifier": 1,
+          "explosion": "explosion-gunshot",
+          "projectile_center": {
+            "1": 0,
+            "2": 0.6
+          },
+          "projectile_creation_distance": 1.2,
+          "range": 15,
+          "shell_particle": {
+            "center": {
+              "1": 0,
+              "2": 0.6
+            },
+            "creation_distance": 0.6,
+            "direction_deviation": 0.1,
+            "name": "shell-particle",
+            "speed": 0.1,
+            "speed_deviation": 0.03,
+            "starting_frame_speed": 0.2,
+            "starting_frame_speed_deviation": 0.1
+          },
+          "sound": {
+            "1": {
+              "filename": "__base__/sound/gunshot.wav",
+              "volume": 0.3
+            }
+          }
+        },
+        "type": "ammo-turret"
+      }
+    },
+    "armor": {
+      "basic-armor": {
+        "damage_decrease": 1.5,
+        "damage_decrease_percent": 20,
+        "durability": 1000,
+        "flags": {
+          "1": "goes-to-main-inventory"
+        },
+        "group": "combat",
+        "icon": "__base__/graphics/icons/basic-armor.png",
+        "name": "basic-armor",
+        "order": "g-a",
+        "stack_size": 10,
+        "type": "armor"
+      }
+    },
+    "arrow": {
+      "red-arrow": {
+        "arrow_picture": {
+          "filename": "__core__/graphics/red-arrow/red-arrow-arrow.png",
+          "height": "230",
+          "width": "1030"
+        },
+        "flags": {
+          "1": "placeable-off-grid"
+        },
+        "name": "red-arrow",
+        "type": "arrow"
+      },
+      "red-arrow-with-circle": {
+        "arrow_picture": {
+          "filename": "__core__/graphics/red-arrow/red-arrow-arrow.png",
+          "height": "230",
+          "width": "1030"
+        },
+        "circle_picture": {
+          "filename": "__core__/graphics/red-arrow/red-arrow-circle.png",
+          "height": "200",
+          "width": "200"
+        },
+        "flags": {
+          "1": "placeable-off-grid"
+        },
+        "name": "red-arrow-with-circle",
+        "type": "arrow"
+      }
+    },
+    "assembling-machine": {
+      "assembling-machine-1": {
+        "animation": {
+          "filename": "__base__/graphics/entity/assembling-machine-1/assembling-machine-1.png",
+          "frame_count": 32,
+          "frame_height": 120,
+          "frame_width": 141,
+          "line_length": 6,
+          "priority": "medium",
+          "shift": {
+            "1": 0.7,
+            "2": 0.12
+          }
+        },
+        "collision_box": {
+          "1": {
+            "1": -1.4,
+            "2": -1.4
+          },
+          "2": {
+            "1": 1.4,
+            "2": 1.4
+          }
+        },
+        "crafting_categories": {
+          "1": "crafting"
+        },
+        "effectivity": 1.5,
+        "energy_source": {
+          "input_priority": "secondary",
+          "type": "electric"
+        },
+        "energy_usage_per_tick": 1.5,
+        "fast_replaceable_group": "assembling-machine",
+        "flags": {
+          "1": "placeable-neutral",
+          "2": "player-creation"
+        },
+        "icon": "__base__/graphics/icons/assembling-machine-1.png",
+        "ingredient_count": 2,
+        "max_health": 100,
+        "minable": {
+          "hardness": 0.2,
+          "mining_time": 0.5,
+          "result": "assembling-machine-1"
+        },
+        "name": "assembling-machine-1",
+        "selection_box": {
+          "1": {
+            "1": -1.5,
+            "2": -1.5
+          },
+          "2": {
+            "1": 1.5,
+            "2": 1.5
+          }
+        },
+        "type": "assembling-machine"
+      }
+    },
+    "boiler": {
+      "boiler": {
+        "burner": {
+          "effectivity": 0.5,
+          "fuel_inventory_size": 1,
+          "smoke": {
+            "1": {
+              "deviation": {
+                "1": 0.1,
+                "2": 0.1
+              },
+              "frequency": 1,
+              "name": "smoke"
+            }
+          }
+        },
+        "burning_cooldown": 20,
+        "collision_box": {
+          "1": {
+            "1": -0.4,
+            "2": -0.4
+          },
+          "2": {
+            "1": 0.4,
+            "2": 0.4
+          }
+        },
+        "energy_consumption": 6.5,
+        "fast_replaceable_group": "pipe",
+        "fire": {
+          "down": {
+            "filename": "__base__/graphics/entity/boiler/boiler-fire-left.png",
+            "frame_count": 12,
+            "frame_height": 13,
+            "frame_width": 12,
+            "priority": "extra-high",
+            "shift": {
+              "1": -0.42,
+              "2": 0.05
+            }
+          },
+          "left": {
+            "filename": "__base__/graphics/entity/boiler/boiler-fire-down.png",
+            "frame_count": 12,
+            "frame_height": 14,
+            "frame_width": 16,
+            "priority": "extra-high",
+            "shift": {
+              "1": 0,
+              "2": 0.23
+            }
+          },
+          "left_down": {
+            "filename": "__base__/graphics/entity/boiler/boiler-fire-right.png",
+            "frame_count": 12,
+            "frame_height": 14,
+            "frame_width": 10,
+            "priority": "extra-high",
+            "shift": {
+              "1": 0.25,
+              "2": -0.05
+            }
+          },
+          "left_up": {
+            "filename": "__base__/graphics/entity/boiler/boiler-fire-down.png",
+            "frame_count": 12,
+            "frame_height": 14,
+            "frame_width": 16,
+            "priority": "extra-high",
+            "shift": {
+              "1": 0,
+              "2": 0.23
+            }
+          },
+          "right_down": {
+            "filename": "__base__/graphics/entity/boiler/boiler-fire-left.png",
+            "frame_count": 12,
+            "frame_height": 13,
+            "frame_width": 12,
+            "priority": "extra-high",
+            "shift": {
+              "1": -0.4,
+              "2": 0.15
+            }
+          },
+          "right_up": {
+            "filename": "__base__/graphics/entity/boiler/boiler-fire-down.png",
+            "frame_count": 12,
+            "frame_height": 14,
+            "frame_width": 16,
+            "priority": "extra-high",
+            "shift": {
+              "1": 0,
+              "2": 0.23
+            }
+          },
+          "t_up": {
+            "filename": "__base__/graphics/entity/boiler/boiler-fire-down.png",
+            "frame_count": 12,
+            "frame_height": 14,
+            "frame_width": 16,
+            "priority": "extra-high",
+            "shift": {
+              "1": 0,
+              "2": 0.23
+            }
+          }
+        },
+        "flags": {
+          "1": "placeable-player",
+          "2": "player-creation"
+        },
+        "icon": "__base__/graphics/icons/boiler.png",
+        "max_health": 20,
+        "max_liquid_amount": 10,
+        "minable": {
+          "hardness": 0.2,
+          "mining_time": 0.5,
+          "result": "boiler"
+        },
+        "name": "boiler",
+        "pictures": {
+          "corner_down_left": {
+            "filename": "__base__/graphics/entity/pipe/pipe-corner-down-left.png",
+            "height": 32,
+            "priority": "extra-high",
+            "width": 32
+          },
+          "corner_down_right": {
+            "filename": "__base__/graphics/entity/pipe/pipe-corner-down-right.png",
+            "height": 32,
+            "priority": "extra-high",
+            "width": 32
+          },
+          "corner_up_left": {
+            "filename": "__base__/graphics/entity/pipe/pipe-corner-up-left.png",
+            "height": 32,
+            "priority": "extra-high",
+            "width": 32
+          },
+          "corner_up_right": {
+            "filename": "__base__/graphics/entity/pipe/pipe-corner-up-right.png",
+            "height": 32,
+            "priority": "extra-high",
+            "width": 32
+          },
+          "cross": {
+            "filename": "__base__/graphics/entity/pipe/pipe-cross.png",
+            "height": 32,
+            "priority": "extra-high",
+            "width": 32
+          },
+          "ending_down": {
+            "filename": "__base__/graphics/entity/pipe/pipe-ending-down.png",
+            "height": 32,
+            "priority": "extra-high",
+            "width": 32
+          },
+          "ending_left": {
+            "filename": "__base__/graphics/entity/pipe/pipe-ending-left.png",
+            "height": 32,
+            "priority": "extra-high",
+            "width": 32
+          },
+          "ending_right": {
+            "filename": "__base__/graphics/entity/pipe/pipe-ending-right.png",
+            "height": 32,
+            "priority": "extra-high",
+            "width": 32
+          },
+          "ending_up": {
+            "filename": "__base__/graphics/entity/pipe/pipe-ending-up.png",
+            "height": 32,
+            "priority": "extra-high",
+            "width": 32
+          },
+          "straight_horizontal": {
+            "filename": "__base__/graphics/entity/pipe/pipe-straight-horizontal.png",
+            "height": 32,
+            "priority": "extra-high",
+            "width": 32
+          },
+          "straight_horizontal_window": {
+            "filename": "__base__/graphics/entity/pipe/pipe-straight-horizontal-window.png",
+            "height": 32,
+            "priority": "extra-high",
+            "width": 32
+          },
+          "straight_vertical": {
+            "filename": "__base__/graphics/entity/pipe/pipe-straight-vertical.png",
+            "height": 32,
+            "priority": "extra-high",
+            "width": 32
+          },
+          "straight_vertical_window": {
+            "filename": "__base__/graphics/entity/pipe/pipe-straight-vertical-window.png",
+            "height": 32,
+            "priority": "extra-high",
+            "width": 32
+          },
+          "t_down": {
+            "filename": "__base__/graphics/entity/pipe/pipe-t-down.png",
+            "height": 32,
+            "priority": "extra-high",
+            "width": 32
+          },
+          "t_left": {
+            "filename": "__base__/graphics/entity/pipe/pipe-t-left.png",
+            "height": 32,
+            "priority": "extra-high",
+            "width": 32
+          },
+          "t_right": {
+            "filename": "__base__/graphics/entity/pipe/pipe-t-right.png",
+            "height": 32,
+            "priority": "extra-high",
+            "width": 32
+          },
+          "t_up": {
+            "filename": "__base__/graphics/entity/pipe/pipe-t-up.png",
+            "height": 32,
+            "priority": "extra-high",
+            "width": 32
+          },
+          "water_flow": {
+            "filename": "__base__/graphics/entity/pipe/water-flow.png",
+            "height": 20,
+            "priority": "extra-high",
+            "width": 128
+          },
+          "water_flow_background": {
+            "filename": "__base__/graphics/entity/pipe/water-flow-background.png",
+            "height": 20,
+            "priority": "extra-high",
+            "width": 32
+          }
+        },
+        "selection_box": {
+          "1": {
+            "1": -0.5,
+            "2": -0.5
+          },
+          "2": {
+            "1": 0.5,
+            "2": 0.5
+          }
+        },
+        "structure": {
+          "down": {
+            "filename": "__base__/graphics/entity/boiler/boiler-down.png",
+            "height": 51,
+            "priority": "extra-high",
+            "shift": {
+              "1": 0.05,
+              "2": 0
+            },
+            "width": 51
+          },
+          "left": {
+            "filename": "__base__/graphics/entity/boiler/boiler-left.png",
+            "height": 51,
+            "priority": "extra-high",
+            "shift": {
+              "1": 0.15,
+              "2": 0
+            },
+            "width": 51
+          },
+          "left_down": {
+            "filename": "__base__/graphics/entity/boiler/boiler-left-down.png",
+            "height": 51,
+            "priority": "extra-high",
+            "shift": {
+              "1": 0,
+              "2": -0.02
+            },
+            "width": 51
+          },
+          "left_up": {
+            "filename": "__base__/graphics/entity/boiler/boiler-left-up.png",
+            "height": 51,
+            "priority": "extra-high",
+            "shift": {
+              "1": 0.05,
+              "2": 0
+            },
+            "width": 51
+          },
+          "right_down": {
+            "filename": "__base__/graphics/entity/boiler/boiler-right-down.png",
+            "height": 51,
+            "priority": "extra-high",
+            "width": 51
+          },
+          "right_up": {
+            "filename": "__base__/graphics/entity/boiler/boiler-right-up.png",
+            "height": 51,
+            "priority": "extra-high",
+            "shift": {
+              "1": 0.15,
+              "2": 0
+            },
+            "width": 51
+          },
+          "t_down": {
+            "filename": "__base__/graphics/entity/boiler/boiler-t-down.png",
+            "height": 51,
+            "priority": "extra-high",
+            "shift": {
+              "1": 0,
+              "2": 0
+            },
+            "width": 51
+          },
+          "t_up": {
+            "filename": "__base__/graphics/entity/boiler/boiler-t-up.png",
+            "height": 51,
+            "priority": "extra-high",
+            "shift": {
+              "1": 0,
+              "2": 0
+            },
+            "width": 51
+          }
+        },
+        "type": "boiler"
+      }
+    },
+    "container": {
+      "space-module-wreck": {
+        "collision_box": {
+          "1": {
+            "1": -2.2,
+            "2": -1
+          },
+          "2": {
+            "1": 2.2,
+            "2": 1
+          }
+        },
+        "flags": {
+          "1": "placeable-neutral",
+          "2": "player-creation"
+        },
+        "icon": "__base__/graphics/icons/space-module-wreck.png",
+        "inventory_size": 4,
+        "max_health": 20,
+        "name": "space-module-wreck",
+        "picture": {
+          "filename": "__base__/graphics/entity/space-module-wreck/wreck.png",
+          "height": 96,
+          "width": 168
+        },
+        "selection_box": {
+          "1": {
+            "1": -2.7,
+            "2": -1.5
+          },
+          "2": {
+            "1": 2.7,
+            "2": 1.5
+          }
+        },
+        "type": "container"
+      },
+      "wooden-chest": {
+        "collision_box": {
+          "1": {
+            "1": -0.4,
+            "2": -0.4
+          },
+          "2": {
+            "1": 0.4,
+            "2": 0.4
+          }
+        },
+        "fast_replaceable_group": "container",
+        "flags": {
+          "1": "placeable-neutral",
+          "2": "player-creation"
+        },
+        "icon": "__base__/graphics/icons/wooden-chest.png",
+        "inventory_size": 16,
+        "max_health": 20,
+        "minable": {
+          "mining_time": 1,
+          "result": "wooden-chest"
+        },
+        "name": "wooden-chest",
+        "picture": {
+          "filename": "__base__/graphics/entity/wooden-chest/wooden-chest.png",
+          "height": 33,
+          "priority": "extra-high",
+          "shift": {
+            "1": 0.3,
+            "2": 0
+          },
+          "width": 46
+        },
+        "selection_box": {
+          "1": {
+            "1": -0.5,
+            "2": -0.5
+          },
+          "2": {
+            "1": 0.5,
+            "2": 0.5
+          }
+        },
+        "type": "container"
+      }
+    },
+    "corpse": {
+      "creeper-corpse": {
+        "animation": {
+          "direction_count": 9,
+          "filename": "__base__/graphics/entity/creeper-corpse/creeper-corpse.png",
+          "frame_count": 15,
+          "frame_height": 96,
+          "frame_width": 87,
+          "shift": {
+            "1": 0.140625,
+            "2": -0.734375
+          }
+        },
+        "name": "creeper-corpse",
+        "type": "corpse"
+      }
+    },
+    "electric-pole": {
+      "small-electric-pole": {
+        "collision_box": {
+          "1": {
+            "1": -0.1,
+            "2": -0.1
+          },
+          "2": {
+            "1": 0.1,
+            "2": 0.1
+          }
+        },
+        "connection_points": {
+          "1": {
+            "shadow": {
+              "copper": {
+                "1": 2.7,
+                "2": 0
+              },
+              "green": {
+                "1": 3.1,
+                "2": 0
+              },
+              "red": {
+                "1": 2.3,
+                "2": 0
+              }
+            },
+            "wire": {
+              "copper": {
+                "1": 0,
+                "2": -2.7
+              },
+              "green": {
+                "1": 0.4,
+                "2": -2.7
+              },
+              "red": {
+                "1": -0.4,
+                "2": -2.7
+              }
+            }
+          },
+          "2": {
+            "shadow": {
+              "copper": {
+                "1": 2.7,
+                "2": -0.05
+              },
+              "green": {
+                "1": 3,
+                "2": 0.3
+              },
+              "red": {
+                "1": 2.2,
+                "2": -0.35
+              }
+            },
+            "wire": {
+              "copper": {
+                "1": 0,
+                "2": -2.7
+              },
+              "green": {
+                "1": 0.2,
+                "2": -2.6
+              },
+              "red": {
+                "1": -0.3,
+                "2": -2.9
+              }
+            }
+          },
+          "3": {
+            "shadow": {
+              "copper": {
+                "1": 2.7,
+                "2": 0.06
+              },
+              "green": {
+                "1": 2.5,
+                "2": 0.55
+              },
+              "red": {
+                "1": 2.55,
+                "2": -0.3
+              }
+            },
+            "wire": {
+              "copper": {
+                "1": 0,
+                "2": -2.7
+              },
+              "green": {
+                "1": 0,
+                "2": -2.5
+              },
+              "red": {
+                "1": 0,
+                "2": -2.95
+              }
+            }
+          },
+          "4": {
+            "shadow": {
+              "copper": {
+                "1": 2.55,
+                "2": 0.2
+              },
+              "green": {
+                "1": 2,
+                "2": 0.45
+              },
+              "red": {
+                "1": 2.85,
+                "2": -0.15
+              }
+            },
+            "wire": {
+              "copper": {
+                "1": 0,
+                "2": -2.7
+              },
+              "green": {
+                "1": -0.3,
+                "2": -2.5
+              },
+              "red": {
+                "1": 0.3,
+                "2": -2.9
+              }
+            }
+          }
+        },
+        "copper_wire_picture": {
+          "filename": "__base__/graphics/entity/small-electric-pole/copper-wire.png",
+          "height": 46,
+          "width": 224
+        },
+        "drawing_box": {
+          "1": {
+            "1": -0.5,
+            "2": -2.3
+          },
+          "2": {
+            "1": 0.5,
+            "2": 0.5
+          }
+        },
+        "flags": {
+          "1": "placeable-neutral",
+          "2": "player-creation"
+        },
+        "green_wire_picture": {
+          "filename": "__base__/graphics/entity/small-electric-pole/green-wire.png",
+          "height": 46,
+          "width": 224
+        },
+        "icon": "__base__/graphics/icons/small-electric-pole.png",
+        "max_health": 35,
+        "maximum_wire_distance": 7.5,
+        "minable": {
+          "hardness": 0.2,
+          "mining_time": 0.5,
+          "result": "small-electric-pole"
+        },
+        "name": "small-electric-pole",
+        "pictures": {
+          "axially_symetric": false,
+          "direction_count": 4,
+          "filename": "__base__/graphics/entity/small-electric-pole/small-electric-pole.png",
+          "frame_height": 124,
+          "frame_width": 123,
+          "priority": "extra-high",
+          "shift": {
+            "1": 1.4,
+            "2": -1.1
+          }
+        },
+        "radius_visualisation_picture": {
+          "filename": "__base__/graphics/entity/small-electric-pole/electric-pole-radius-visualization.png",
+          "height": 12,
+          "width": 12
+        },
+        "red_wire_picture": {
+          "filename": "__base__/graphics/entity/small-electric-pole/red-wire.png",
+          "height": 46,
+          "width": 224
+        },
+        "selection_box": {
+          "1": {
+            "1": -0.5,
+            "2": -0.5
+          },
+          "2": {
+            "1": 0.5,
+            "2": 0.5
+          }
+        },
+        "supply_area_distance": 2.5,
+        "type": "electric-pole",
+        "wire_shadow_picture": {
+          "filename": "__base__/graphics/entity/small-electric-pole/wire-shadow.png",
+          "height": 46,
+          "width": 224
+        }
+      }
+    },
+    "explosion": {
+      "explosion": {
+        "animation_speed": 3,
+        "animations": {
+          "1": {
+            "filename": "__base__/graphics/entity/explosion/explosion-1.png",
+            "frame_count": 16,
+            "frame_height": 59,
+            "frame_width": 64,
+            "priority": "extra-high"
+          },
+          "2": {
+            "filename": "__base__/graphics/entity/explosion/explosion-2.png",
+            "frame_count": 16,
+            "frame_height": 57,
+            "frame_width": 64,
+            "priority": "extra-high"
+          },
+          "3": {
+            "filename": "__base__/graphics/entity/explosion/explosion-3.png",
+            "frame_count": 16,
+            "frame_height": 49,
+            "frame_width": 64,
+            "priority": "extra-high"
+          },
+          "4": {
+            "filename": "__base__/graphics/entity/explosion/explosion-4.png",
+            "frame_count": 16,
+            "frame_height": 51,
+            "frame_width": 64,
+            "priority": "extra-high"
+          }
+        },
+        "light": {
+          "intensity": 1,
+          "size": 20
+        },
+        "name": "explosion",
+        "smoke": "smoke-fast",
+        "smoke_count": 2,
+        "smoke_slow_down_factor": 1,
+        "sound": {
+          "1": {
+            "filename": "__base__/sound/explosion1.wav",
+            "volume": 0.8
+          },
+          "2": {
+            "filename": "__base__/sound/explosion2.wav",
+            "volume": 0.8
+          }
+        },
+        "type": "explosion"
+      },
+      "explosion-gunshot": {
+        "animation_speed": 3,
+        "animations": {
+          "1": {
+            "filename": "__base__/graphics/entity/explosion-gunshot/explosion-gunshot.png",
+            "frame_count": 5,
+            "frame_height": 30,
+            "frame_width": 30,
+            "priority": "extra-high"
+          }
+        },
+        "light": {
+          "intensity": 1,
+          "size": 10
+        },
+        "name": "explosion-gunshot",
+        "smoke": "smoke-fast",
+        "smoke_count": 2,
+        "smoke_slow_down_factor": 1,
+        "type": "explosion"
+      },
+      "huge-explosion": {
+        "animation_speed": 5,
+        "animations": {
+          "1": {
+            "filename": "__base__/graphics/entity/huge-explosion/huge-explosion.png",
+            "frame_count": 24,
+            "frame_height": 131,
+            "frame_width": 111,
+            "line_length": 5,
+            "priority": "extra-high"
+          }
+        },
+        "light": {
+          "intensity": 1,
+          "size": 50
+        },
+        "name": "huge-explosion",
+        "smoke": "smoke",
+        "smoke_count": 20,
+        "smoke_slow_down_factor": 1,
+        "sound": {
+          "1": {
+            "filename": "__base__/sound/huge-explosion.wav",
+            "volume": 1.25
+          }
+        },
+        "type": "explosion"
+      }
+    },
+    "fish": {
+      "fish": {
+        "autoplace": {
+          "influence": 0.01
+        },
+        "collision_box": {
+          "1": {
+            "1": -0.4,
+            "2": -0.2
+          },
+          "2": {
+            "1": 0.4,
+            "2": 0.2
+          }
+        },
+        "flags": {
+          "1": "placeable-neutral"
+        },
+        "icon": "__base__/graphics/icons/fish.png",
+        "max_health": 5,
+        "minable": {
+          "mining_time": 1,
+          "result": "fish"
+        },
+        "name": "fish",
+        "pictures": {
+          "1": {
+            "filename": "__base__/graphics/entity/fish/fish-1.png",
+            "height": 36,
+            "priority": "extra-high",
+            "width": 22
+          },
+          "2": {
+            "filename": "__base__/graphics/entity/fish/fish-2.png",
+            "height": 32,
+            "priority": "extra-high",
+            "width": 32
+          }
+        },
+        "selection_box": {
+          "1": {
+            "1": -0.5,
+            "2": -0.3
+          },
+          "2": {
+            "1": 0.5,
+            "2": 0.3
+          }
+        },
+        "type": "fish"
+      }
+    },
+    "flying-text": {
+      "flying-text": {
+        "flags": {},
+        "name": "flying-text",
+        "speed": 0.05,
+        "time_to_live": 150,
+        "type": "flying-text"
+      }
+    },
+    "furnace": {
+      "stone-furnace": {
+        "collision_box": {
+          "1": {
+            "1": -0.7,
+            "2": -0.7
+          },
+          "2": {
+            "1": 0.7,
+            "2": 0.7
+          }
+        },
+        "drawing_scale": 1,
+        "energy_source": {
+          "effectivity": 1,
+          "fuel_inventory_size": 1,
+          "smoke": {
+            "1": {
+              "deviation": {
+                "1": 0.1,
+                "2": 0.1
+              },
+              "frequency": 0.5,
+              "name": "smoke",
+              "position": {
+                "1": 0,
+                "2": -2.3
+              }
+            }
+          },
+          "type": "burner"
+        },
+        "fast_replaceable_group": "furnace",
+        "fire_animation": {
+          "filename": "__base__/graphics/entity/stone-furnace/stone-furnace-fire.png",
+          "frame_count": 12,
+          "frame_height": 27,
+          "frame_width": 23,
+          "priority": "extra-high",
+          "shift": {
+            "1": 0.078125,
+            "2": 0.5234375
+          }
+        },
+        "flags": {
+          "1": "placeable-neutral",
+          "2": "player-creation"
+        },
+        "icon": "__base__/graphics/icons/stone-furnace.png",
+        "max_health": 20,
+        "minable": {
+          "mining_time": 1,
+          "result": "stone-furnace"
+        },
+        "name": "stone-furnace",
+        "off_animation": {
+          "filename": "__base__/graphics/entity/stone-furnace/stone-furnace.png",
+          "frame_count": 1,
+          "frame_height": 64,
+          "frame_width": 81,
+          "priority": "extra-high",
+          "shift": {
+            "1": 0.5,
+            "2": 0.05
+          }
+        },
+        "on_animation": {
+          "filename": "__base__/graphics/entity/stone-furnace/stone-furnace.png",
+          "frame_count": 1,
+          "frame_height": 64,
+          "frame_width": 81,
+          "priority": "extra-high",
+          "shift": {
+            "1": 0.5,
+            "2": 0.05
+          }
+        },
+        "result_inventory_size": 1,
+        "selection_box": {
+          "1": {
+            "1": -0.8,
+            "2": -1
+          },
+          "2": {
+            "1": 0.8,
+            "2": 1
+          }
+        },
+        "smelting_categories": {
+          "1": "smelting"
+        },
+        "smelting_energy_consumption": 3,
+        "smelting_speed": 0.5,
+        "source_inventory_size": 1,
+        "type": "furnace"
+      }
+    },
+    "generator": {
+      "steam-engine": {
+        "collision_box": {
+          "1": {
+            "1": -1.4,
+            "2": -2.4
+          },
+          "2": {
+            "1": 1.4,
+            "2": 2.4
+          }
+        },
+        "energy_source": {
+          "output_priority": "secondary",
+          "type": "electric"
+        },
+        "flags": {
+          "1": "placeable-neutral",
+          "2": "player-creation"
+        },
+        "horizontal_animation": {
+          "filename": "__base__/graphics/entity/steam-engine/steam-engine-horizontal.png",
+          "frame_count": 32,
+          "frame_height": 150,
+          "frame_width": 219,
+          "line_length": 8,
+          "priority": "high",
+          "shift": {
+            "1": 1.1,
+            "2": -0.3
+          }
+        },
+        "icon": "__base__/graphics/icons/steam-engine.png",
+        "max_health": 150,
+        "minable": {
+          "mining_time": 1,
+          "result": "steam-engine"
+        },
+        "name": "steam-engine",
+        "pipes_horizontal": {
+          "filename": "__base__/graphics/entity/steam-engine/pipes-horizontal.png",
+          "height": 32,
+          "priority": "high",
+          "shift": {
+            "1": 0,
+            "2": 0
+          },
+          "width": 160
+        },
+        "pipes_vertical": {
+          "filename": "__base__/graphics/entity/steam-engine/pipes-vertical.png",
+          "height": 160,
+          "priority": "high",
+          "shift": {
+            "1": 0.1,
+            "2": 0
+          },
+          "width": 36
+        },
+        "selection_box": {
+          "1": {
+            "1": -1.5,
+            "2": -2.5
+          },
+          "2": {
+            "1": 1.5,
+            "2": 2.5
+          }
+        },
+        "smoke": {
+          "1": {
+            "deviation": {
+              "1": 0.2,
+              "2": 0.2
+            },
+            "east_position": {
+              "1": -1.1,
+              "2": -2.6
+            },
+            "frequency": 1,
+            "name": "smoke",
+            "north_position": {
+              "1": 0,
+              "2": -2.2
+            },
+            "offset": 0.33
+          },
+          "2": {
+            "deviation": {
+              "1": 0.2,
+              "2": 0.2
+            },
+            "east_position": {
+              "1": 0,
+              "2": -2.6
+            },
+            "frequency": 1,
+            "name": "smoke",
+            "north_position": {
+              "1": 0,
+              "2": -1.1
+            },
+            "offset": 0.66
+          },
+          "3": {
+            "deviation": {
+              "1": 0.2,
+              "2": 0.2
+            },
+            "east_position": {
+              "1": 1.1,
+              "2": -2.6
+            },
+            "frequency": 1,
+            "name": "smoke",
+            "north_position": {
+              "1": 0,
+              "2": 0
+            },
+            "offset": 0.99
+          }
+        },
+        "type": "generator",
+        "vertical_animation": {
+          "filename": "__base__/graphics/entity/steam-engine/steam-engine-vertical.png",
+          "frame_count": 32,
+          "frame_height": 222,
+          "frame_width": 180,
+          "line_length": 8,
+          "priority": "high",
+          "shift": {
+            "1": 1.2,
+            "2": 1
+          }
+        }
+      }
+    },
+    "gui-style": {
+      "default": {}
+    },
+    "gun": {
+      "pistol": {
+        "flags": {
+          "1": "goes-to-main-inventory"
+        },
+        "group": "combat",
+        "icon": "__base__/graphics/icons/pistol.png",
+        "name": "pistol",
+        "order": "e-a",
+        "shooting_parameters": {
+          "ammo_category": "bullet",
+          "cooldown": 10,
+          "explosion": "explosion-gunshot",
+          "projectile_creation_distance": 0.6,
+          "range": 15,
+          "shell_particle": {
+            "center": {
+              "1": 0,
+              "2": 0.6
+            },
+            "creation_distance": 0.6,
+            "direction_deviation": 0.1,
+            "name": "shell-particle",
+            "speed": 0.1,
+            "speed_deviation": 0.03,
+            "starting_frame_speed": 0.4,
+            "starting_frame_speed_deviation": 0.1
+          },
+          "sound": {
+            "1": {
+              "filename": "__base__/sound/gunshot.wav",
+              "volume": 0.3
+            }
+          }
+        },
+        "stack_size": 4,
+        "type": "gun"
+      },
+      "submachine-gun": {
+        "flags": {
+          "1": "goes-to-main-inventory"
+        },
+        "group": "combat",
+        "icon": "__base__/graphics/icons/submachine-gun.png",
+        "name": "submachine-gun",
+        "order": "e-b",
+        "shooting_parameters": {
+          "ammo_category": "bullet",
+          "cooldown": 4,
+          "explosion": "explosion-gunshot",
+          "projectile_creation_distance": 0.6,
+          "range": 15,
+          "shell_particle": {
+            "center": {
+              "1": 0,
+              "2": 0.6
+            },
+            "creation_distance": 0.6,
+            "direction_deviation": 0.1,
+            "name": "shell-particle",
+            "speed": 0.1,
+            "speed_deviation": 0.03,
+            "starting_frame_speed": 0.4,
+            "starting_frame_speed_deviation": 0.1
+          },
+          "sound": {
+            "1": {
+              "filename": "__base__/sound/gunshot.wav",
+              "volume": 0.2
+            }
+          }
+        },
+        "stack_size": 1,
+        "type": "gun"
+      }
+    },
+    "inserter": {
+      "basic-inserter": {
+        "collision_box": {
+          "1": {
+            "1": -0.15,
+            "2": -0.15
+          },
+          "2": {
+            "1": 0.15,
+            "2": 0.15
+          }
+        },
+        "energy_per_movement": 5,
+        "energy_per_rotation": 5,
+        "energy_source": {
+          "input_priority": "secondary",
+          "type": "electric"
+        },
+        "extension_speed": 0.028,
+        "fast_replaceable_group": "inserter",
+        "flags": {
+          "1": "placeable-neutral",
+          "2": "player-creation"
+        },
+        "hand_base_picture": {
+          "filename": "__base__/graphics/entity/basic-inserter/basic-inserter-hand-base.png",
+          "height": 34,
+          "priority": "extra-high",
+          "width": 8
+        },
+        "hand_closed_picture": {
+          "filename": "__base__/graphics/entity/basic-inserter/basic-inserter-hand-closed.png",
+          "height": 41,
+          "priority": "extra-high",
+          "width": 13
+        },
+        "hand_open_picture": {
+          "filename": "__base__/graphics/entity/basic-inserter/basic-inserter-hand-open.png",
+          "height": 41,
+          "priority": "extra-high",
+          "width": 13
+        },
+        "icon": "__base__/graphics/icons/basic-inserter.png",
+        "insert_distance": 0.85,
+        "max_health": 10,
+        "minable": {
+          "hardness": 0.2,
+          "mining_time": 0.5,
+          "result": "basic-inserter"
+        },
+        "name": "basic-inserter",
+        "pickup_distance": 1,
+        "platform_picture": {
+          "height": 46,
+          "priority": "extra-high",
+          "sheet": "__base__/graphics/entity/basic-inserter/basic-inserter-platform.png",
+          "width": 46
+        },
+        "rotation_speed": 0.014,
+        "selection_box": {
+          "1": {
+            "1": -0.5,
+            "2": -0.5
+          },
+          "2": {
+            "1": 0.5,
+            "2": 0.5
+          }
+        },
+        "type": "inserter"
+      },
+      "burner-inserter": {
+        "collision_box": {
+          "1": {
+            "1": -0.15,
+            "2": -0.15
+          },
+          "2": {
+            "1": 0.15,
+            "2": 0.15
+          }
+        },
+        "energy_per_movement": 100,
+        "energy_per_rotation": 100,
+        "energy_source": {
+          "effectivity": 1,
+          "fuel_inventory_size": 1,
+          "smoke": {
+            "1": {
+              "deviation": {
+                "1": 0.1,
+                "2": 0.1
+              },
+              "frequency": 0.3,
+              "name": "smoke"
+            }
+          },
+          "type": "burner"
+        },
+        "extension_speed": 0.02,
+        "fast_replaceable_group": "inserter",
+        "flags": {
+          "1": "placeable-neutral",
+          "2": "player-creation"
+        },
+        "hand_base_picture": {
+          "filename": "__base__/graphics/entity/burner-inserter/burner-inserter-hand-base.png",
+          "height": 34,
+          "priority": "extra-high",
+          "width": 8
+        },
+        "hand_closed_picture": {
+          "filename": "__base__/graphics/entity/burner-inserter/burner-inserter-hand-closed.png",
+          "height": 41,
+          "priority": "extra-high",
+          "width": 13
+        },
+        "hand_open_picture": {
+          "filename": "__base__/graphics/entity/burner-inserter/burner-inserter-hand-open.png",
+          "height": 41,
+          "priority": "extra-high",
+          "width": 13
+        },
+        "icon": "__base__/graphics/icons/burner-inserter.png",
+        "insert_distance": 0.85,
+        "max_health": 10,
+        "minable": {
+          "hardness": 0.2,
+          "mining_time": 0.5,
+          "result": "burner-inserter"
+        },
+        "name": "burner-inserter",
+        "pickup_distance": 1,
+        "platform_picture": {
+          "height": 46,
+          "priority": "extra-high",
+          "sheet": "__base__/graphics/entity/burner-inserter/burner-inserter-platform.png",
+          "width": 46
+        },
+        "rotation_speed": 0.01,
+        "selection_box": {
+          "1": {
+            "1": -0.5,
+            "2": -0.5
+          },
+          "2": {
+            "1": 0.5,
+            "2": 0.5
+          }
+        },
+        "type": "inserter"
+      }
+    },
+    "item": {
+      "alien-artifact": {
+        "flags": {
+          "1": "goes-to-main-inventory"
+        },
+        "group": "production",
+        "icon": "__base__/graphics/icons/alien-artifact.png",
+        "name": "alien-artifact",
+        "order": "l",
+        "stack_size": 500,
+        "type": "item"
+      },
+      "assembling-machine-1": {
+        "flags": {
+          "1": "goes-to-quickbar"
+        },
+        "group": "production",
+        "icon": "__base__/graphics/icons/assembling-machine-1.png",
+        "name": "assembling-machine-1",
+        "order": "h-f-a",
+        "place_result": "assembling-machine-1",
+        "stack_size": 64,
+        "type": "item"
+      },
+      "basic-inserter": {
+        "flags": {
+          "1": "goes-to-quickbar"
+        },
+        "group": "logistics",
+        "icon": "__base__/graphics/icons/basic-inserter.png",
+        "name": "basic-inserter",
+        "order": "h-e-b",
+        "place_result": "basic-inserter",
+        "stack_size": 64,
+        "type": "item"
+      },
+      "basic-mining-drill": {
+        "flags": {
+          "1": "goes-to-quickbar"
+        },
+        "group": "production",
+        "icon": "__base__/graphics/icons/basic-mining-drill.png",
+        "name": "basic-mining-drill",
+        "order": "h-c-b",
+        "place_result": "basic-mining-drill",
+        "stack_size": 64,
+        "type": "item"
+      },
+      "basic-transport-belt": {
+        "flags": {
+          "1": "goes-to-quickbar"
+        },
+        "group": "logistics",
+        "icon": "__base__/graphics/icons/basic-transport-belt.png",
+        "name": "basic-transport-belt",
+        "order": "h-d-a",
+        "place_result": "basic-transport-belt",
+        "stack_size": 64,
+        "type": "item"
+      },
+      "boiler": {
+        "flags": {
+          "1": "goes-to-quickbar"
+        },
+        "group": "energy",
+        "icon": "__base__/graphics/icons/boiler.png",
+        "name": "boiler",
+        "order": "h-g-d",
+        "place_result": "boiler",
+        "stack_size": 32,
+        "type": "item"
+      },
+      "burner-inserter": {
+        "flags": {
+          "1": "goes-to-quickbar"
+        },
+        "group": "logistics",
+        "icon": "__base__/graphics/icons/burner-inserter.png",
+        "name": "burner-inserter",
+        "order": "h-e-a",
+        "place_result": "burner-inserter",
+        "stack_size": 64,
+        "type": "item"
+      },
+      "burner-mining-drill": {
+        "flags": {
+          "1": "goes-to-quickbar"
+        },
+        "group": "production",
+        "icon": "__base__/graphics/icons/burner-mining-drill.png",
+        "name": "burner-mining-drill",
+        "order": "h-c-a",
+        "place_result": "burner-mining-drill",
+        "stack_size": 64,
+        "type": "item"
+      },
+      "coal": {
+        "flags": {
+          "1": "goes-to-main-inventory"
+        },
+        "fuel_value": "8KJ",
+        "group": "production",
+        "icon": "__base__/graphics/icons/coal.png",
+        "name": "coal",
+        "order": "a-a",
+        "stack_size": 64,
+        "type": "item"
+      },
+      "computer": {
+        "flags": {
+          "1": "goes-to-quickbar"
+        },
+        "group": "combat",
+        "icon": "__base__/graphics/icons/computer.png",
+        "name": "computer",
+        "order": "i",
+        "stack_size": 1,
+        "type": "item"
+      },
+      "copper-cable": {
+        "flags": {
+          "1": "goes-to-main-inventory"
+        },
+        "group": "energy",
+        "icon": "__base__/graphics/icons/copper-cable.png",
+        "name": "copper-cable",
+        "order": "c-f",
+        "stack_size": 256,
+        "type": "item"
+      },
+      "copper-ore": {
+        "flags": {
+          "1": "goes-to-main-inventory"
+        },
+        "group": "production",
+        "icon": "__base__/graphics/icons/copper-ore.png",
+        "name": "copper-ore",
+        "order": "a-d",
+        "stack_size": 64,
+        "type": "item"
+      },
+      "copper-plate": {
+        "flags": {
+          "1": "goes-to-main-inventory"
+        },
+        "group": "production",
+        "icon": "__base__/graphics/icons/copper-plate.png",
+        "name": "copper-plate",
+        "order": "b-b",
+        "stack_size": 128,
+        "type": "item"
+      },
+      "creeper-spawner": {
+        "flags": {
+          "1": "goes-to-quickbar"
+        },
+        "group": "combat",
+        "icon": "__base__/graphics/icons/creeper-spawner.png",
+        "name": "creeper-spawner",
+        "order": "h-j-f",
+        "place_result": "creeper-spawner",
+        "stack_size": 32,
+        "type": "item"
+      },
+      "electronic-circuit": {
+        "flags": {
+          "1": "goes-to-main-inventory"
+        },
+        "group": "production",
+        "icon": "__base__/graphics/icons/electronic-circuit.png",
+        "name": "electronic-circuit",
+        "order": "c-g",
+        "stack_size": 256,
+        "type": "item"
+      },
+      "fish": {
+        "flags": {
+          "1": "goes-to-main-inventory"
+        },
+        "group": "other",
+        "healing_value": 20,
+        "icon": "__base__/graphics/icons/fish.png",
+        "name": "fish",
+        "order": "h",
+        "stack_size": 64,
+        "type": "item"
+      },
+      "gun-turret": {
+        "flags": {
+          "1": "goes-to-quickbar"
+        },
+        "group": "combat",
+        "icon": "__base__/graphics/icons/gun-turret.png",
+        "name": "gun-turret",
+        "order": "h-j-c",
+        "place_result": "gun-turret",
+        "stack_size": 64,
+        "type": "item"
+      },
+      "iron-gear-wheel": {
+        "flags": {
+          "1": "goes-to-main-inventory"
+        },
+        "group": "production",
+        "icon": "__base__/graphics/icons/iron-gear-wheel.png",
+        "name": "iron-gear-wheel",
+        "order": "c-d",
+        "stack_size": 64,
+        "type": "item"
+      },
+      "iron-ore": {
+        "flags": {
+          "1": "goes-to-main-inventory"
+        },
+        "group": "production",
+        "icon": "__base__/graphics/icons/iron-ore.png",
+        "name": "iron-ore",
+        "order": "a-e",
+        "stack_size": 64,
+        "type": "item"
+      },
+      "iron-plate": {
+        "flags": {
+          "1": "goes-to-main-inventory"
+        },
+        "group": "production",
+        "icon": "__base__/graphics/icons/iron-plate.png",
+        "name": "iron-plate",
+        "order": "b-c",
+        "stack_size": 128,
+        "type": "item"
+      },
+      "iron-stick": {
+        "flags": {
+          "1": "goes-to-main-inventory"
+        },
+        "group": "production",
+        "icon": "__base__/graphics/icons/iron-stick.png",
+        "name": "iron-stick",
+        "order": "c-c",
+        "stack_size": 128,
+        "type": "item"
+      },
+      "pipe": {
+        "flags": {
+          "1": "goes-to-quickbar"
+        },
+        "group": "energy",
+        "icon": "__base__/graphics/icons/pipe.png",
+        "name": "pipe",
+        "order": "h-g-b",
+        "place_result": "pipe",
+        "stack_size": 32,
+        "type": "item"
+      },
+      "pipe-to-ground": {
+        "flags": {
+          "1": "goes-to-quickbar"
+        },
+        "group": "energy",
+        "icon": "__base__/graphics/icons/pipe-to-ground.png",
+        "name": "pipe-to-ground",
+        "order": "h-g-c",
+        "place_result": "pipe-to-ground",
+        "stack_size": 64,
+        "type": "item"
+      },
+      "pump": {
+        "flags": {
+          "1": "goes-to-quickbar"
+        },
+        "group": "energy",
+        "icon": "__base__/graphics/icons/pump.png",
+        "name": "pump",
+        "order": "h-g-a",
+        "place_result": "pump",
+        "stack_size": 32,
+        "type": "item"
+      },
+      "radar": {
+        "flags": {
+          "1": "goes-to-quickbar"
+        },
+        "group": "combat",
+        "icon": "__base__/graphics/icons/radar.png",
+        "name": "radar",
+        "order": "h-j-b",
+        "place_result": "radar",
+        "stack_size": 64,
+        "type": "item"
+      },
+      "raw-wood": {
+        "flags": {
+          "1": "goes-to-main-inventory"
+        },
+        "fuel_value": "4KJ",
+        "group": "production",
+        "icon": "__base__/graphics/icons/raw-wood.png",
+        "name": "raw-wood",
+        "order": "a-b",
+        "stack_size": 64,
+        "type": "item"
+      },
+      "small-electric-pole": {
+        "flags": {
+          "1": "goes-to-quickbar"
+        },
+        "group": "energy",
+        "icon": "__base__/graphics/icons/small-electric-pole.png",
+        "name": "small-electric-pole",
+        "order": "h-h-c",
+        "place_result": "small-electric-pole",
+        "stack_size": 32,
+        "type": "item"
+      },
+      "small-lamp": {
+        "flags": {
+          "1": "goes-to-quickbar"
+        },
+        "group": "energy",
+        "icon": "__base__/graphics/icons/small-lamp.png",
+        "name": "small-lamp",
+        "order": "h-e-f",
+        "place_result": "small-lamp",
+        "stack_size": 64,
+        "type": "item"
+      },
+      "steam-engine": {
+        "flags": {
+          "1": "goes-to-quickbar"
+        },
+        "group": "energy",
+        "icon": "__base__/graphics/icons/steam-engine.png",
+        "name": "steam-engine",
+        "order": "h-h-a",
+        "place_result": "steam-engine",
+        "stack_size": 8,
+        "type": "item"
+      },
+      "stone": {
+        "flags": {
+          "1": "goes-to-main-inventory"
+        },
+        "group": "production",
+        "icon": "__base__/graphics/icons/stone.png",
+        "name": "stone",
+        "order": "a-c",
+        "stack_size": 64,
+        "type": "item"
+      },
+      "stone-furnace": {
+        "flags": {
+          "1": "goes-to-quickbar"
+        },
+        "group": "production",
+        "icon": "__base__/graphics/icons/stone-furnace.png",
+        "name": "stone-furnace",
+        "order": "h-b-a",
+        "place_result": "stone-furnace",
+        "stack_size": 64,
+        "type": "item"
+      },
+      "wood": {
+        "flags": {
+          "1": "goes-to-main-inventory"
+        },
+        "fuel_value": "0.6KJ",
+        "group": "production",
+        "icon": "__base__/graphics/icons/wood.png",
+        "name": "wood",
+        "order": "b-a",
+        "stack_size": 64,
+        "type": "item"
+      },
+      "wooden-chest": {
+        "flags": {
+          "1": "goes-to-quickbar"
+        },
+        "fuel_value": "6KJ",
+        "group": "logistics",
+        "icon": "__base__/graphics/icons/wooden-chest.png",
+        "name": "wooden-chest",
+        "order": "h-a-a",
+        "place_result": "wooden-chest",
+        "stack_size": 64,
+        "type": "item"
+      }
+    },
+    "item-entity": {
+      "item-on-ground": {
+        "collision_box": {
+          "1": {
+            "1": -0.14,
+            "2": -0.14
+          },
+          "2": {
+            "1": 0.14,
+            "2": 0.14
+          }
+        },
+        "flags": {
+          "1": "placeable-off-grid"
+        },
+        "name": "item-on-ground",
+        "selection_box": {
+          "1": {
+            "1": -0.17,
+            "2": -0.17
+          },
+          "2": {
+            "1": 0.17,
+            "2": 0.17
+          }
+        },
+        "type": "item-entity"
+      }
+    },
+    "item-group": {
+      "combat": {
+        "icon": "__base__/graphics/technology/military.png",
+        "name": "combat",
+        "order": "e",
+        "type": "item-group"
+      },
+      "energy": {
+        "icon": "__base__/graphics/technology/solar-energy.png",
+        "name": "energy",
+        "order": "d",
+        "type": "item-group"
+      },
+      "logistics": {
+        "icon": "__base__/graphics/technology/logistics.png",
+        "name": "logistics",
+        "order": "b",
+        "type": "item-group"
+      },
+      "other": {
+        "icon": "__core__/graphics/questionmark.png",
+        "name": "other",
+        "order": "f",
+        "type": "item-group"
+      },
+      "production": {
+        "icon": "__base__/graphics/technology/automation.png",
+        "name": "production",
+        "order": "c",
+        "type": "item-group"
+      }
+    },
+    "lamp": {
+      "small-lamp": {
+        "collision_box": {
+          "1": {
+            "1": -0.15,
+            "2": -0.15
+          },
+          "2": {
+            "1": 0.15,
+            "2": 0.15
+          }
+        },
+        "energy_source": {
+          "input_priority": "secondary",
+          "type": "electric"
+        },
+        "energy_usage_per_tick": 0.2,
+        "flags": {
+          "1": "placeable-neutral",
+          "2": "player-creation"
+        },
+        "icon": "__base__/graphics/icons/small-lamp.png",
+        "light": {
+          "intensity": 0.9,
+          "size": 40
+        },
+        "max_health": 35,
+        "minable": {
+          "hardness": 0.2,
+          "mining_time": 0.5,
+          "result": "small-lamp"
+        },
+        "name": "small-lamp",
+        "picture_off": {
+          "filename": "__base__/graphics/entity/small-lamp/small-lamp.png",
+          "height": 75,
+          "shift": {
+            "1": 0,
+            "2": -0.1
+          },
+          "width": 83
+        },
+        "picture_on": {
+          "filename": "__base__/graphics/entity/small-lamp/small-lamp.png",
+          "height": 75,
+          "shift": {
+            "1": 0,
+            "2": -0.1
+          },
+          "width": 83,
+          "x": 83
+        },
+        "selection_box": {
+          "1": {
+            "1": -0.5,
+            "2": -0.5
+          },
+          "2": {
+            "1": 0.5,
+            "2": 0.5
+          }
+        },
+        "type": "lamp"
+      }
+    },
+    "mining-drill": {
+      "basic-mining-drill": {
+        "animation_speed_modifier": 0.5,
+        "animations": {
+          "east": {
+            "filename": "__base__/graphics/entity/basic-mining-drill/east.png",
+            "frame_count": 64,
+            "frame_height": 100,
+            "frame_width": 129,
+            "line_length": 8,
+            "priority": "extra-high",
+            "shift": {
+              "1": 0.45,
+              "2": 0
+            }
+          },
+          "north": {
+            "filename": "__base__/graphics/entity/basic-mining-drill/north.png",
+            "frame_count": 64,
+            "frame_height": 114,
+            "frame_width": 110,
+            "line_length": 8,
+            "priority": "extra-high",
+            "shift": {
+              "1": 0.2,
+              "2": -0.2
+            }
+          },
+          "south": {
+            "filename": "__base__/graphics/entity/basic-mining-drill/south.png",
+            "frame_count": 64,
+            "frame_height": 111,
+            "frame_width": 109,
+            "line_length": 8,
+            "priority": "extra-high",
+            "shift": {
+              "1": 0.15,
+              "2": 0
+            }
+          },
+          "west": {
+            "filename": "__base__/graphics/entity/basic-mining-drill/west.png",
+            "frame_count": 64,
+            "frame_height": 100,
+            "frame_width": 128,
+            "line_length": 8,
+            "priority": "extra-high",
+            "shift": {
+              "1": 0.25,
+              "2": 0
+            }
+          }
+        },
+        "collision_box": {
+          "1": {
+            "1": -1.4,
+            "2": -1.4
+          },
+          "2": {
+            "1": 1.4,
+            "2": 1.4
+          }
+        },
+        "effectivity": 0.5,
+        "energy_source": {
+          "input_priority": "secondary",
+          "type": "electric"
+        },
+        "energy_usage_per_tick": 1.5,
+        "flags": {
+          "1": "placeable-neutral",
+          "2": "player-creation"
+        },
+        "icon": "__base__/graphics/icons/basic-mining-drill.png",
+        "max_health": 70,
+        "minable": {
+          "mining_time": 1,
+          "result": "basic-mining-drill"
+        },
+        "mining_speed": 3,
+        "name": "basic-mining-drill",
+        "pipe_length": 2,
+        "resource_searching_radius": 2.49,
+        "selection_box": {
+          "1": {
+            "1": -1.5,
+            "2": -1.5
+          },
+          "2": {
+            "1": 1.5,
+            "2": 1.5
+          }
+        },
+        "type": "mining-drill",
+        "vector_to_place_result": {
+          "1": 0,
+          "2": -1.75
+        }
+      },
+      "burner-mining-drill": {
+        "animation_speed_modifier": 0.5,
+        "animations": {
+          "east": {
+            "filename": "__base__/graphics/entity/burner-mining-drill/east.png",
+            "frame_count": 32,
+            "frame_height": 74,
+            "frame_width": 94,
+            "line_length": 4,
+            "priority": "extra-high",
+            "shift": {
+              "1": 0.45,
+              "2": -0.1
+            }
+          },
+          "north": {
+            "filename": "__base__/graphics/entity/burner-mining-drill/north.png",
+            "frame_count": 32,
+            "frame_height": 76,
+            "frame_width": 110,
+            "line_length": 4,
+            "priority": "extra-high",
+            "shift": {
+              "1": 0.7,
+              "2": -0.1
+            }
+          },
+          "south": {
+            "filename": "__base__/graphics/entity/burner-mining-drill/south.png",
+            "frame_count": 32,
+            "frame_height": 88,
+            "frame_width": 89,
+            "line_length": 4,
+            "priority": "extra-high",
+            "shift": {
+              "1": 0.4,
+              "2": 0
+            }
+          },
+          "west": {
+            "filename": "__base__/graphics/entity/burner-mining-drill/west.png",
+            "frame_count": 32,
+            "frame_height": 78,
+            "frame_width": 91,
+            "line_length": 4,
+            "priority": "extra-high",
+            "shift": {
+              "1": 0.1,
+              "2": -0.05
+            }
+          }
+        },
+        "collision_box": {
+          "1": {
+            "1": -0.9,
+            "2": -0.9
+          },
+          "2": {
+            "1": 0.9,
+            "2": 0.9
+          }
+        },
+        "effectivity": 0.15,
+        "energy_source": {
+          "effectivity": 1,
+          "fuel_inventory_size": 1,
+          "smoke": {
+            "1": {
+              "deviation": {
+                "1": 0.1,
+                "2": 0.1
+              },
+              "frequency": 1,
+              "name": "smoke"
+            }
+          },
+          "type": "burner"
+        },
+        "energy_usage_per_tick": 3,
+        "flags": {
+          "1": "placeable-neutral",
+          "2": "player-creation"
+        },
+        "icon": "__base__/graphics/icons/burner-mining-drill.png",
+        "max_health": 40,
+        "minable": {
+          "mining_time": 1,
+          "result": "burner-mining-drill"
+        },
+        "mining_speed": 2.5,
+        "name": "burner-mining-drill",
+        "pipe_length": 1,
+        "resource_searching_radius": 0.99,
+        "selection_box": {
+          "1": {
+            "1": -1,
+            "2": -1
+          },
+          "2": {
+            "1": 1,
+            "2": 1
+          }
+        },
+        "type": "mining-drill",
+        "vector_to_place_result": {
+          "1": -0.5,
+          "2": -1.3
+        }
+      }
+    },
+    "mining-tool": {
+      "iron-axe": {
+        "damage": 5,
+        "durability": 4000,
+        "flags": {
+          "1": "goes-to-main-inventory"
+        },
+        "group": "production",
+        "icon": "__base__/graphics/icons/iron-axe.png",
+        "name": "iron-axe",
+        "order": "d-b",
+        "speed": 2.5,
+        "stack_size": 32,
+        "type": "mining-tool"
+      }
+    },
+    "noise-layer": {
+      "dirt": {
+        "name": "dirt",
+        "type": "noise-layer"
+      },
+      "dry-trees": {
+        "name": "dry-trees",
+        "type": "noise-layer"
+      },
+      "grass": {
+        "name": "grass",
+        "type": "noise-layer"
+      },
+      "hills": {
+        "name": "hills",
+        "type": "noise-layer"
+      },
+      "sand": {
+        "name": "sand",
+        "type": "noise-layer"
+      },
+      "trees": {
+        "name": "trees",
+        "type": "noise-layer"
+      }
+    },
+    "particle": {
+      "coal-particle": {
+        "flags": {},
+        "life_time": 180,
+        "name": "coal-particle",
+        "pictures": {
+          "1": {
+            "filename": "__base__/graphics/entity/coal-particle/coal-particle-1.png",
+            "frame_count": 1,
+            "frame_height": 5,
+            "frame_width": 5,
+            "priority": "extra-high"
+          },
+          "2": {
+            "filename": "__base__/graphics/entity/coal-particle/coal-particle-2.png",
+            "frame_count": 1,
+            "frame_height": 6,
+            "frame_width": 7,
+            "priority": "extra-high"
+          },
+          "3": {
+            "filename": "__base__/graphics/entity/coal-particle/coal-particle-3.png",
+            "frame_count": 1,
+            "frame_height": 6,
+            "frame_width": 3,
+            "priority": "extra-high"
+          },
+          "4": {
+            "filename": "__base__/graphics/entity/coal-particle/coal-particle-4.png",
+            "frame_count": 1,
+            "frame_height": 4,
+            "frame_width": 4,
+            "priority": "extra-high"
+          }
+        },
+        "shadows": {
+          "1": {
+            "filename": "__base__/graphics/entity/coal-particle/coal-particle-shadow-1.png",
+            "frame_count": 1,
+            "frame_height": 5,
+            "frame_width": 5,
+            "priority": "extra-high"
+          },
+          "2": {
+            "filename": "__base__/graphics/entity/coal-particle/coal-particle-shadow-2.png",
+            "frame_count": 1,
+            "frame_height": 6,
+            "frame_width": 7,
+            "priority": "extra-high"
+          },
+          "3": {
+            "filename": "__base__/graphics/entity/coal-particle/coal-particle-shadow-3.png",
+            "frame_count": 1,
+            "frame_height": 6,
+            "frame_width": 3,
+            "priority": "extra-high"
+          },
+          "4": {
+            "filename": "__base__/graphics/entity/coal-particle/coal-particle-shadow-4.png",
+            "frame_count": 1,
+            "frame_height": 4,
+            "frame_width": 6,
+            "priority": "extra-high"
+          }
+        },
+        "type": "particle"
+      },
+      "copper-ore-particle": {
+        "flags": {},
+        "life_time": 180,
+        "name": "copper-ore-particle",
+        "pictures": {
+          "1": {
+            "filename": "__base__/graphics/entity/copper-ore-particle/copper-ore-particle-1.png",
+            "frame_count": 1,
+            "frame_height": 5,
+            "frame_width": 5,
+            "priority": "extra-high"
+          },
+          "2": {
+            "filename": "__base__/graphics/entity/copper-ore-particle/copper-ore-particle-2.png",
+            "frame_count": 1,
+            "frame_height": 4,
+            "frame_width": 6,
+            "priority": "extra-high"
+          },
+          "3": {
+            "filename": "__base__/graphics/entity/copper-ore-particle/copper-ore-particle-3.png",
+            "frame_count": 1,
+            "frame_height": 8,
+            "frame_width": 7,
+            "priority": "extra-high"
+          },
+          "4": {
+            "filename": "__base__/graphics/entity/copper-ore-particle/copper-ore-particle-4.png",
+            "frame_count": 1,
+            "frame_height": 5,
+            "frame_width": 6,
+            "priority": "extra-high"
+          }
+        },
+        "shadows": {
+          "1": {
+            "filename": "__base__/graphics/entity/copper-ore-particle/copper-ore-particle-shadow-1.png",
+            "frame_count": 1,
+            "frame_height": 5,
+            "frame_width": 5,
+            "priority": "extra-high"
+          },
+          "2": {
+            "filename": "__base__/graphics/entity/copper-ore-particle/copper-ore-particle-shadow-2.png",
+            "frame_count": 1,
+            "frame_height": 4,
+            "frame_width": 6,
+            "priority": "extra-high"
+          },
+          "3": {
+            "filename": "__base__/graphics/entity/copper-ore-particle/copper-ore-particle-shadow-3.png",
+            "frame_count": 1,
+            "frame_height": 8,
+            "frame_width": 7,
+            "priority": "extra-high"
+          },
+          "4": {
+            "filename": "__base__/graphics/entity/copper-ore-particle/copper-ore-particle-shadow-4.png",
+            "frame_count": 1,
+            "frame_height": 5,
+            "frame_width": 6,
+            "priority": "extra-high"
+          }
+        },
+        "type": "particle"
+      },
+      "iron-ore-particle": {
+        "flags": {},
+        "life_time": 180,
+        "name": "iron-ore-particle",
+        "pictures": {
+          "1": {
+            "filename": "__base__/graphics/entity/iron-ore-particle/iron-ore-particle-1.png",
+            "frame_count": 1,
+            "frame_height": 5,
+            "frame_width": 5,
+            "priority": "extra-high"
+          },
+          "2": {
+            "filename": "__base__/graphics/entity/iron-ore-particle/iron-ore-particle-2.png",
+            "frame_count": 1,
+            "frame_height": 5,
+            "frame_width": 7,
+            "priority": "extra-high"
+          },
+          "3": {
+            "filename": "__base__/graphics/entity/iron-ore-particle/iron-ore-particle-3.png",
+            "frame_count": 1,
+            "frame_height": 7,
+            "frame_width": 6,
+            "priority": "extra-high"
+          },
+          "4": {
+            "filename": "__base__/graphics/entity/iron-ore-particle/iron-ore-particle-4.png",
+            "frame_count": 1,
+            "frame_height": 8,
+            "frame_width": 9,
+            "priority": "extra-high"
+          }
+        },
+        "shadows": {
+          "1": {
+            "filename": "__base__/graphics/entity/iron-ore-particle/iron-ore-particle-shadow-1.png",
+            "frame_count": 1,
+            "frame_height": 5,
+            "frame_width": 5,
+            "priority": "extra-high"
+          },
+          "2": {
+            "filename": "__base__/graphics/entity/iron-ore-particle/iron-ore-particle-shadow-2.png",
+            "frame_count": 1,
+            "frame_height": 5,
+            "frame_width": 7,
+            "priority": "extra-high"
+          },
+          "3": {
+            "filename": "__base__/graphics/entity/iron-ore-particle/iron-ore-particle-shadow-3.png",
+            "frame_count": 1,
+            "frame_height": 7,
+            "frame_width": 6,
+            "priority": "extra-high"
+          },
+          "4": {
+            "filename": "__base__/graphics/entity/iron-ore-particle/iron-ore-particle-shadow-4.png",
+            "frame_count": 1,
+            "frame_height": 8,
+            "frame_width": 9,
+            "priority": "extra-high"
+          }
+        },
+        "type": "particle"
+      },
+      "shell-particle": {
+        "flags": {},
+        "life_time": 600,
+        "name": "shell-particle",
+        "pictures": {
+          "1": {
+            "filename": "__base__/graphics/entity/shell-particle/shell-particle-1.png",
+            "frame_count": 5,
+            "frame_height": 6,
+            "frame_width": 6,
+            "priority": "extra-high"
+          },
+          "2": {
+            "filename": "__base__/graphics/entity/shell-particle/shell-particle-2.png",
+            "frame_count": 5,
+            "frame_height": 7,
+            "frame_width": 5,
+            "priority": "extra-high"
+          }
+        },
+        "shadows": {
+          "1": {
+            "filename": "__base__/graphics/entity/shell-particle/shell-particle-shadow-1.png",
+            "frame_count": 5,
+            "frame_height": 7,
+            "frame_width": 9,
+            "priority": "extra-high"
+          },
+          "2": {
+            "filename": "__base__/graphics/entity/shell-particle/shell-particle-shadow-2.png",
+            "frame_count": 5,
+            "frame_height": 8,
+            "frame_width": 7,
+            "priority": "extra-high"
+          }
+        },
+        "type": "particle"
+      },
+      "stone-particle": {
+        "flags": {},
+        "life_time": 180,
+        "name": "stone-particle",
+        "pictures": {
+          "1": {
+            "filename": "__base__/graphics/entity/stone-particle/stone-particle-1.png",
+            "frame_count": 1,
+            "frame_height": 4,
+            "frame_width": 5,
+            "priority": "extra-high"
+          },
+          "2": {
+            "filename": "__base__/graphics/entity/stone-particle/stone-particle-2.png",
+            "frame_count": 1,
+            "frame_height": 4,
+            "frame_width": 4,
+            "priority": "extra-high"
+          },
+          "3": {
+            "filename": "__base__/graphics/entity/stone-particle/stone-particle-3.png",
+            "frame_count": 1,
+            "frame_height": 6,
+            "frame_width": 5,
+            "priority": "extra-high"
+          },
+          "4": {
+            "filename": "__base__/graphics/entity/stone-particle/stone-particle-4.png",
+            "frame_count": 1,
+            "frame_height": 7,
+            "frame_width": 7,
+            "priority": "extra-high"
+          }
+        },
+        "shadows": {
+          "1": {
+            "filename": "__base__/graphics/entity/stone-particle/stone-particle-shadow-1.png",
+            "frame_count": 1,
+            "frame_height": 4,
+            "frame_width": 5,
+            "priority": "extra-high"
+          },
+          "2": {
+            "filename": "__base__/graphics/entity/stone-particle/stone-particle-shadow-2.png",
+            "frame_count": 1,
+            "frame_height": 4,
+            "frame_width": 4,
+            "priority": "extra-high"
+          },
+          "3": {
+            "filename": "__base__/graphics/entity/stone-particle/stone-particle-shadow-3.png",
+            "frame_count": 1,
+            "frame_height": 6,
+            "frame_width": 5,
+            "priority": "extra-high"
+          },
+          "4": {
+            "filename": "__base__/graphics/entity/stone-particle/stone-particle-shadow-4.png",
+            "frame_count": 1,
+            "frame_height": 7,
+            "frame_width": 7,
+            "priority": "extra-high"
+          }
+        },
+        "type": "particle"
+      },
+      "wooden-particle": {
+        "flags": {},
+        "life_time": 180,
+        "name": "wooden-particle",
+        "pictures": {
+          "1": {
+            "filename": "__base__/graphics/entity/wooden-particle/wooden-particle-1.png",
+            "frame_count": 1,
+            "frame_height": 5,
+            "frame_width": 5,
+            "priority": "extra-high"
+          },
+          "2": {
+            "filename": "__base__/graphics/entity/wooden-particle/wooden-particle-2.png",
+            "frame_count": 1,
+            "frame_height": 4,
+            "frame_width": 6,
+            "priority": "extra-high"
+          },
+          "3": {
+            "filename": "__base__/graphics/entity/wooden-particle/wooden-particle-3.png",
+            "frame_count": 1,
+            "frame_height": 8,
+            "frame_width": 7,
+            "priority": "extra-high"
+          },
+          "4": {
+            "filename": "__base__/graphics/entity/wooden-particle/wooden-particle-4.png",
+            "frame_count": 1,
+            "frame_height": 5,
+            "frame_width": 6,
+            "priority": "extra-high"
+          }
+        },
+        "shadows": {
+          "1": {
+            "filename": "__base__/graphics/entity/wooden-particle/wooden-particle-shadow-1.png",
+            "frame_count": 1,
+            "frame_height": 5,
+            "frame_width": 5,
+            "priority": "extra-high"
+          },
+          "2": {
+            "filename": "__base__/graphics/entity/wooden-particle/wooden-particle-shadow-2.png",
+            "frame_count": 1,
+            "frame_height": 4,
+            "frame_width": 6,
+            "priority": "extra-high"
+          },
+          "3": {
+            "filename": "__base__/graphics/entity/wooden-particle/wooden-particle-shadow-3.png",
+            "frame_count": 1,
+            "frame_height": 8,
+            "frame_width": 7,
+            "priority": "extra-high"
+          },
+          "4": {
+            "filename": "__base__/graphics/entity/wooden-particle/wooden-particle-shadow-4.png",
+            "frame_count": 1,
+            "frame_height": 5,
+            "frame_width": 6,
+            "priority": "extra-high"
+          }
+        },
+        "type": "particle"
+      }
+    },
+    "pipe": {
+      "pipe": {
+        "collision_box": {
+          "1": {
+            "1": -0.4,
+            "2": -0.4
+          },
+          "2": {
+            "1": 0.4,
+            "2": 0.4
+          }
+        },
+        "fast_replaceable_group": "pipe",
+        "flags": {
+          "1": "placeable-neutral",
+          "2": "player-creation"
+        },
+        "icon": "__base__/graphics/icons/pipe.png",
+        "max_health": 10,
+        "max_liquid_amount": 10,
+        "minable": {
+          "hardness": 0.2,
+          "mining_time": 0.5,
+          "result": "pipe"
+        },
+        "name": "pipe",
+        "pictures": {
+          "corner_down_left": {
+            "filename": "__base__/graphics/entity/pipe/pipe-corner-down-left.png",
+            "height": 32,
+            "priority": "extra-high",
+            "width": 32
+          },
+          "corner_down_right": {
+            "filename": "__base__/graphics/entity/pipe/pipe-corner-down-right.png",
+            "height": 32,
+            "priority": "extra-high",
+            "width": 32
+          },
+          "corner_up_left": {
+            "filename": "__base__/graphics/entity/pipe/pipe-corner-up-left.png",
+            "height": 32,
+            "priority": "extra-high",
+            "width": 32
+          },
+          "corner_up_right": {
+            "filename": "__base__/graphics/entity/pipe/pipe-corner-up-right.png",
+            "height": 32,
+            "priority": "extra-high",
+            "width": 32
+          },
+          "cross": {
+            "filename": "__base__/graphics/entity/pipe/pipe-cross.png",
+            "height": 32,
+            "priority": "extra-high",
+            "width": 32
+          },
+          "ending_down": {
+            "filename": "__base__/graphics/entity/pipe/pipe-ending-down.png",
+            "height": 32,
+            "priority": "extra-high",
+            "width": 32
+          },
+          "ending_left": {
+            "filename": "__base__/graphics/entity/pipe/pipe-ending-left.png",
+            "height": 32,
+            "priority": "extra-high",
+            "width": 32
+          },
+          "ending_right": {
+            "filename": "__base__/graphics/entity/pipe/pipe-ending-right.png",
+            "height": 32,
+            "priority": "extra-high",
+            "width": 32
+          },
+          "ending_up": {
+            "filename": "__base__/graphics/entity/pipe/pipe-ending-up.png",
+            "height": 32,
+            "priority": "extra-high",
+            "width": 32
+          },
+          "straight_horizontal": {
+            "filename": "__base__/graphics/entity/pipe/pipe-straight-horizontal.png",
+            "height": 32,
+            "priority": "extra-high",
+            "width": 32
+          },
+          "straight_horizontal_window": {
+            "filename": "__base__/graphics/entity/pipe/pipe-straight-horizontal-window.png",
+            "height": 32,
+            "priority": "extra-high",
+            "width": 32
+          },
+          "straight_vertical": {
+            "filename": "__base__/graphics/entity/pipe/pipe-straight-vertical.png",
+            "height": 32,
+            "priority": "extra-high",
+            "width": 32
+          },
+          "straight_vertical_window": {
+            "filename": "__base__/graphics/entity/pipe/pipe-straight-vertical-window.png",
+            "height": 32,
+            "priority": "extra-high",
+            "width": 32
+          },
+          "t_down": {
+            "filename": "__base__/graphics/entity/pipe/pipe-t-down.png",
+            "height": 32,
+            "priority": "extra-high",
+            "width": 32
+          },
+          "t_left": {
+            "filename": "__base__/graphics/entity/pipe/pipe-t-left.png",
+            "height": 32,
+            "priority": "extra-high",
+            "width": 32
+          },
+          "t_right": {
+            "filename": "__base__/graphics/entity/pipe/pipe-t-right.png",
+            "height": 32,
+            "priority": "extra-high",
+            "width": 32
+          },
+          "t_up": {
+            "filename": "__base__/graphics/entity/pipe/pipe-t-up.png",
+            "height": 32,
+            "priority": "extra-high",
+            "width": 32
+          },
+          "water_flow": {
+            "filename": "__base__/graphics/entity/pipe/water-flow.png",
+            "height": 20,
+            "priority": "extra-high",
+            "width": 128
+          },
+          "water_flow_background": {
+            "filename": "__base__/graphics/entity/pipe/water-flow-background.png",
+            "height": 20,
+            "priority": "extra-high",
+            "width": 32
+          }
+        },
+        "selection_box": {
+          "1": {
+            "1": -0.5,
+            "2": -0.5
+          },
+          "2": {
+            "1": 0.5,
+            "2": 0.5
+          }
+        },
+        "type": "pipe"
+      }
+    },
+    "pipe-to-ground": {
+      "pipe-to-ground": {
+        "collision_box": {
+          "1": {
+            "1": -0.4,
+            "2": -0.4
+          },
+          "2": {
+            "1": 0.4,
+            "2": 0.4
+          }
+        },
+        "flags": {
+          "1": "placeable-neutral",
+          "2": "player-creation"
+        },
+        "icon": "__base__/graphics/icons/pipe-to-ground.png",
+        "max_health": 50,
+        "max_liquid_amount": 10,
+        "minable": {
+          "hardness": 0.2,
+          "mining_time": 0.5,
+          "result": "pipe-to-ground"
+        },
+        "name": "pipe-to-ground",
+        "pictures": {
+          "down": {
+            "filename": "__base__/graphics/entity/pipe-to-ground/pipe-to-ground-down.png",
+            "height": 32,
+            "priority": "high",
+            "width": 32
+          },
+          "left": {
+            "filename": "__base__/graphics/entity/pipe-to-ground/pipe-to-ground-left.png",
+            "height": 38,
+            "priority": "high",
+            "shift": {
+              "1": 0,
+              "2": 0.1
+            },
+            "width": 34
+          },
+          "right": {
+            "filename": "__base__/graphics/entity/pipe-to-ground/pipe-to-ground-right.png",
+            "height": 38,
+            "priority": "high",
+            "shift": {
+              "1": 0.1,
+              "2": 0.1
+            },
+            "width": 34
+          },
+          "up": {
+            "filename": "__base__/graphics/entity/pipe-to-ground/pipe-to-ground-up.png",
+            "height": 32,
+            "priority": "high",
+            "width": 32
+          }
+        },
+        "selection_box": {
+          "1": {
+            "1": -0.5,
+            "2": -0.5
+          },
+          "2": {
+            "1": 0.5,
+            "2": 0.5
+          }
+        },
+        "type": "pipe-to-ground"
+      }
+    },
+    "player": {
+      "player": {
+        "collision_box": {
+          "1": {
+            "1": -0.2,
+            "2": -0.2
+          },
+          "2": {
+            "1": 0.2,
+            "2": 0.2
+          }
+        },
+        "crafting_categories": {
+          "1": "crafting"
+        },
+        "distance_per_frame": 0.13,
+        "eat": {
+          "1": {
+            "filename": "__base__/sound/eat.wav",
+            "volume": 1
+          }
+        },
+        "flags": {
+          "1": "pushable",
+          "2": "placeable-player",
+          "3": "placeable-off-grid"
+        },
+        "heartbeat": {
+          "1": {
+            "filename": "__base__/sound/heartbeat.ogg",
+            "volume": 1.5
+          }
+        },
+        "icon": "__base__/graphics/icons/player.png",
+        "idle_animation": {
+          "direction_count": 5,
+          "frame_height": 66,
+          "frame_width": 48,
+          "priority": "medium",
+          "shift": {
+            "1": 0,
+            "2": -0.6
+          },
+          "stripes": {
+            "1": {
+              "filename": "__base__/graphics/entity/player/character-idle-1.png",
+              "frame_count": 40
+            },
+            "2": {
+              "filename": "__base__/graphics/entity/player/character-idle-2.png",
+              "frame_count": 40
+            },
+            "3": {
+              "filename": "__base__/graphics/entity/player/character-idle-3.png",
+              "frame_count": 40
+            }
+          }
+        },
+        "idle_frames_per_tick": 1,
+        "idle_with_gun_animation": {
+          "direction_count": 5,
+          "frame_height": 66,
+          "frame_width": 48,
+          "priority": "medium",
+          "shift": {
+            "1": 0,
+            "2": -0.6
+          },
+          "stripes": {
+            "1": {
+              "filename": "__base__/graphics/entity/player/character-idle-with-gun-1.png",
+              "frame_count": 40
+            },
+            "2": {
+              "filename": "__base__/graphics/entity/player/character-idle-with-gun-2.png",
+              "frame_count": 40
+            },
+            "3": {
+              "filename": "__base__/graphics/entity/player/character-idle-with-gun-3.png",
+              "frame_count": 40
+            }
+          }
+        },
+        "idle_with_gun_frames_per_tick": 1,
+        "light": {
+          "intensity": 0.4,
+          "size": 25
+        },
+        "max_health": 100,
+        "maximum_corner_sliding_distance": 0.7,
+        "mine_with_hands_frames_per_tick": 1,
+        "mine_with_tool_frames_per_tick": 1,
+        "mining_speed": 0.01,
+        "mining_with_hands_animation": {
+          "direction_count": 5,
+          "frame_height": 66,
+          "frame_width": 48,
+          "priority": "medium",
+          "shift": {
+            "1": 0,
+            "2": -0.6
+          },
+          "stripes": {
+            "1": {
+              "filename": "__base__/graphics/entity/player/character-mine-with-hands-1.png",
+              "frame_count": 40
+            },
+            "2": {
+              "filename": "__base__/graphics/entity/player/character-mine-with-hands-2.png",
+              "frame_count": 40
+            }
+          }
+        },
+        "mining_with_hands_particles_animation_positions": {
+          "1": 29,
+          "2": 63
+        },
+        "mining_with_tool_animation": {
+          "direction_count": 5,
+          "frame_height": 88,
+          "frame_width": 64,
+          "priority": "medium",
+          "shift": {
+            "1": 0,
+            "2": -0.6
+          },
+          "stripes": {
+            "1": {
+              "filename": "__base__/graphics/entity/player/character-mine-with-tool-1.png",
+              "frame_count": 24
+            },
+            "2": {
+              "filename": "__base__/graphics/entity/player/character-mine-with-tool-2.png",
+              "frame_count": 24
+            }
+          }
+        },
+        "mining_with_tool_particles_animation_positions": {
+          "1": 28
+        },
+        "name": "player",
+        "running_aim": {
+          "direction_count": 18,
+          "filename": "__base__/graphics/entity/player/character-clothes-run-aim.png",
+          "frame_count": 30,
+          "frame_height": 72,
+          "frame_width": 58,
+          "priority": "medium",
+          "shift": {
+            "1": 0,
+            "2": -0.6
+          }
+        },
+        "running_animation": {
+          "direction_count": 5,
+          "filename": "__base__/graphics/entity/player/character-clothes-run.png",
+          "frame_count": 30,
+          "frame_height": 66,
+          "frame_width": 48,
+          "priority": "medium",
+          "shift": {
+            "1": 0,
+            "2": -0.6
+          }
+        },
+        "running_mask_animation": {
+          "direction_count": 5,
+          "filename": "__base__/graphics/entity/player/character-clothes-run-mask.png",
+          "frame_count": 30,
+          "frame_height": 66,
+          "frame_width": 48,
+          "priority": "medium",
+          "shift": {
+            "1": 0,
+            "2": -0.6
+          }
+        },
+        "running_speed": 0.15,
+        "selection_box": {
+          "1": {
+            "1": -0.2,
+            "2": -0.2
+          },
+          "2": {
+            "1": 0.2,
+            "2": 0.2
+          }
+        },
+        "type": "player"
+      }
+    },
+    "pump": {
+      "pump": {
+        "collision_box": {
+          "1": {
+            "1": -0.6,
+            "2": -0.3
+          },
+          "2": {
+            "1": 0.6,
+            "2": 0.3
+          }
+        },
+        "flags": {
+          "1": "placeable-neutral",
+          "2": "player-creation",
+          "3": "filter-directions"
+        },
+        "icon": "__base__/graphics/icons/pump.png",
+        "max_health": 20,
+        "minable": {
+          "mining_time": 1,
+          "result": "pump"
+        },
+        "name": "pump",
+        "picture": {
+          "height": 102,
+          "priority": "extra-high",
+          "sheet": "__base__/graphics/entity/pump/pump.png",
+          "shift": {
+            "1": 0.9,
+            "2": 0.05
+          },
+          "width": 160
+        },
+        "selection_box": {
+          "1": {
+            "1": -1,
+            "2": -0.49
+          },
+          "2": {
+            "1": 1,
+            "2": 1.49
+          }
+        },
+        "tile_width": 1,
+        "type": "pump"
+      }
+    },
+    "radar": {
+      "radar": {
+        "collision_box": {
+          "1": {
+            "1": -1.4,
+            "2": -1.4
+          },
+          "2": {
+            "1": 1.4,
+            "2": 1.4
+          }
+        },
+        "energy_per_sector": 20000,
+        "energy_source": {
+          "input_priority": "secondary",
+          "type": "electric"
+        },
+        "energy_usage_per_tick": 10,
+        "flags": {
+          "1": "placeable-player",
+          "2": "player-creation"
+        },
+        "icon": "__base__/graphics/icons/radar.png",
+        "max_health": 60,
+        "minable": {
+          "hardness": 0.2,
+          "mining_time": 0.5,
+          "result": "radar"
+        },
+        "name": "radar",
+        "pictures": {
+          "axially_symmetrical": false,
+          "direction_count": 64,
+          "filename": "__base__/graphics/entity/radar/radar.png",
+          "frame_height": 140,
+          "frame_width": 169,
+          "line_length": 8,
+          "priority": "low",
+          "shift": {
+            "1": 1.15,
+            "2": 0.75
+          }
+        },
+        "selection_box": {
+          "1": {
+            "1": -1.5,
+            "2": -1.5
+          },
+          "2": {
+            "1": 1.5,
+            "2": 1.5
+          }
+        },
+        "type": "radar"
+      }
+    },
+    "rail-category": {
+      "regular": {
+        "name": "regular",
+        "type": "rail-category"
+      }
+    },
+    "recipe": {
+      "assembling-machine-1": {
+        "enabled": "false",
+        "ingredients": {
+          "1": {
+            "1": "electronic-circuit",
+            "2": 3
+          },
+          "2": {
+            "1": "iron-gear-wheel",
+            "2": 5
+          },
+          "3": {
+            "1": "iron-plate",
+            "2": 9
+          }
+        },
+        "name": "assembling-machine-1",
+        "result": "assembling-machine-1",
+        "type": "recipe"
+      },
+      "basic-armor": {
+        "enabled": "false",
+        "energy_required": 5,
+        "ingredients": {
+          "1": {
+            "1": "iron-plate",
+            "2": 40
+          }
+        },
+        "name": "basic-armor",
+        "result": "basic-armor",
+        "type": "recipe"
+      },
+      "basic-bullet-magazine": {
+        "energy_required": 2,
+        "ingredients": {
+          "1": {
+            "1": "iron-plate",
+            "2": 2
+          }
+        },
+        "name": "basic-bullet-magazine",
+        "result": "basic-bullet-magazine",
+        "result_count": 1,
+        "type": "recipe"
+      },
+      "basic-inserter": {
+        "ingredients": {
+          "1": {
+            "1": "electronic-circuit",
+            "2": 1
+          },
+          "2": {
+            "1": "iron-gear-wheel",
+            "2": 1
+          },
+          "3": {
+            "1": "iron-plate",
+            "2": 1
+          }
+        },
+        "name": "basic-inserter",
+        "result": "basic-inserter",
+        "type": "recipe"
+      },
+      "basic-mining-drill": {
+        "energy_required": 5,
+        "ingredients": {
+          "1": {
+            "1": "electronic-circuit",
+            "2": 3
+          },
+          "2": {
+            "1": "iron-gear-wheel",
+            "2": 5
+          },
+          "3": {
+            "1": "iron-plate",
+            "2": 10
+          }
+        },
+        "name": "basic-mining-drill",
+        "result": "basic-mining-drill",
+        "type": "recipe"
+      },
+      "basic-transport-belt": {
+        "ingredients": {
+          "1": {
+            "1": "iron-plate",
+            "2": 1
+          },
+          "2": {
+            "1": "iron-gear-wheel",
+            "2": 1
+          }
+        },
+        "name": "basic-transport-belt",
+        "result": "basic-transport-belt",
+        "result_count": 2,
+        "type": "recipe"
+      },
+      "boiler": {
+        "ingredients": {
+          "1": {
+            "1": "stone-furnace",
+            "2": 1
+          },
+          "2": {
+            "1": "pipe",
+            "2": 1
+          }
+        },
+        "name": "boiler",
+        "result": "boiler",
+        "type": "recipe"
+      },
+      "burner-inserter": {
+        "ingredients": {
+          "1": {
+            "1": "iron-plate",
+            "2": 1
+          },
+          "2": {
+            "1": "iron-gear-wheel",
+            "2": 1
+          }
+        },
+        "name": "burner-inserter",
+        "result": "burner-inserter",
+        "type": "recipe"
+      },
+      "burner-mining-drill": {
+        "energy_required": 4,
+        "ingredients": {
+          "1": {
+            "1": "iron-gear-wheel",
+            "2": 3
+          },
+          "2": {
+            "1": "stone-furnace",
+            "2": 1
+          },
+          "3": {
+            "1": "iron-plate",
+            "2": 3
+          }
+        },
+        "name": "burner-mining-drill",
+        "result": "burner-mining-drill",
+        "type": "recipe"
+      },
+      "copper-cable": {
+        "ingredients": {
+          "1": {
+            "1": "copper-plate",
+            "2": 1
+          }
+        },
+        "name": "copper-cable",
+        "result": "copper-cable",
+        "result_count": 2,
+        "type": "recipe"
+      },
+      "copper-plate": {
+        "category": "smelting",
+        "energy_required": 100,
+        "ingredients": {
+          "1": {
+            "1": "copper-ore",
+            "2": 1
+          }
+        },
+        "name": "copper-plate",
+        "result": "copper-plate",
+        "type": "recipe"
+      },
+      "electronic-circuit": {
+        "ingredients": {
+          "1": {
+            "1": "iron-plate",
+            "2": 1
+          },
+          "2": {
+            "1": "copper-cable",
+            "2": 3
+          }
+        },
+        "name": "electronic-circuit",
+        "result": "electronic-circuit",
+        "type": "recipe"
+      },
+      "gun-turret": {
+        "enabled": "false",
+        "ingredients": {
+          "1": {
+            "1": "iron-gear-wheel",
+            "2": 5
+          },
+          "2": {
+            "1": "copper-plate",
+            "2": 5
+          },
+          "3": {
+            "1": "iron-plate",
+            "2": 10
+          }
+        },
+        "name": "gun-turret",
+        "result": "gun-turret",
+        "type": "recipe"
+      },
+      "iron-axe": {
+        "ingredients": {
+          "1": {
+            "1": "iron-stick",
+            "2": 2
+          },
+          "2": {
+            "1": "iron-plate",
+            "2": 3
+          }
+        },
+        "name": "iron-axe",
+        "result": "iron-axe",
+        "type": "recipe"
+      },
+      "iron-gear-wheel": {
+        "ingredients": {
+          "1": {
+            "1": "iron-plate",
+            "2": 2
+          }
+        },
+        "name": "iron-gear-wheel",
+        "result": "iron-gear-wheel",
+        "type": "recipe"
+      },
+      "iron-plate": {
+        "category": "smelting",
+        "energy_required": 100,
+        "ingredients": {
+          "1": {
+            "1": "iron-ore",
+            "2": 1
+          }
+        },
+        "name": "iron-plate",
+        "result": "iron-plate",
+        "type": "recipe"
+      },
+      "iron-stick": {
+        "ingredients": {
+          "1": {
+            "1": "iron-plate",
+            "2": 1
+          }
+        },
+        "name": "iron-stick",
+        "result": "iron-stick",
+        "result_count": 2,
+        "type": "recipe"
+      },
+      "pipe": {
+        "ingredients": {
+          "1": {
+            "1": "iron-plate",
+            "2": 1
+          }
+        },
+        "name": "pipe",
+        "result": "pipe",
+        "type": "recipe"
+      },
+      "pipe-to-ground": {
+        "ingredients": {
+          "1": {
+            "1": "pipe",
+            "2": 1
+          },
+          "2": {
+            "1": "iron-plate",
+            "2": 1
+          }
+        },
+        "name": "pipe-to-ground",
+        "result": "pipe-to-ground",
+        "type": "recipe"
+      },
+      "pistol": {
+        "energy_required": 2,
+        "ingredients": {
+          "1": {
+            "1": "copper-plate",
+            "2": 5
+          },
+          "2": {
+            "1": "iron-plate",
+            "2": 5
+          }
+        },
+        "name": "pistol",
+        "result": "pistol",
+        "type": "recipe"
+      },
+      "pump": {
+        "ingredients": {
+          "1": {
+            "1": "electronic-circuit",
+            "2": 2
+          },
+          "2": {
+            "1": "pipe",
+            "2": 1
+          },
+          "3": {
+            "1": "iron-gear-wheel",
+            "2": 1
+          }
+        },
+        "name": "pump",
+        "result": "pump",
+        "type": "recipe"
+      },
+      "radar": {
+        "ingredients": {
+          "1": {
+            "1": "electronic-circuit",
+            "2": 5
+          },
+          "2": {
+            "1": "iron-gear-wheel",
+            "2": 5
+          },
+          "3": {
+            "1": "iron-plate",
+            "2": 10
+          }
+        },
+        "name": "radar",
+        "result": "radar",
+        "type": "recipe"
+      },
+      "small-electric-pole": {
+        "ingredients": {
+          "1": {
+            "1": "wood",
+            "2": 2
+          },
+          "2": {
+            "1": "copper-cable",
+            "2": 2
+          }
+        },
+        "name": "small-electric-pole",
+        "result": "small-electric-pole",
+        "result_count": 2,
+        "type": "recipe"
+      },
+      "small-lamp": {
+        "enabled": "false",
+        "ingredients": {
+          "1": {
+            "1": "electronic-circuit",
+            "2": 1
+          },
+          "2": {
+            "1": "iron-stick",
+            "2": 3
+          },
+          "3": {
+            "1": "iron-plate",
+            "2": 1
+          }
+        },
+        "name": "small-lamp",
+        "result": "small-lamp",
+        "type": "recipe"
+      },
+      "steam-engine": {
+        "ingredients": {
+          "1": {
+            "1": "iron-gear-wheel",
+            "2": 5
+          },
+          "2": {
+            "1": "pipe",
+            "2": 5
+          },
+          "3": {
+            "1": "iron-plate",
+            "2": 5
+          }
+        },
+        "name": "steam-engine",
+        "result": "steam-engine",
+        "type": "recipe"
+      },
+      "stone-furnace": {
+        "ingredients": {
+          "1": {
+            "1": "stone",
+            "2": 5
+          }
+        },
+        "name": "stone-furnace",
+        "result": "stone-furnace",
+        "type": "recipe"
+      },
+      "submachine-gun": {
+        "enabled": "false",
+        "energy_required": 5,
+        "ingredients": {
+          "1": {
+            "1": "iron-gear-wheel",
+            "2": 10
+          },
+          "2": {
+            "1": "copper-plate",
+            "2": 5
+          },
+          "3": {
+            "1": "iron-plate",
+            "2": 10
+          }
+        },
+        "name": "submachine-gun",
+        "result": "submachine-gun",
+        "type": "recipe"
+      },
+      "wood": {
+        "ingredients": {
+          "1": {
+            "1": "raw-wood",
+            "2": 1
+          }
+        },
+        "name": "wood",
+        "result": "wood",
+        "result_count": 2,
+        "type": "recipe"
+      },
+      "wooden-chest": {
+        "ingredients": {
+          "1": {
+            "1": "wood",
+            "2": 4
+          }
+        },
+        "name": "wooden-chest",
+        "result": "wooden-chest",
+        "type": "recipe"
+      }
+    },
+    "recipe-category": {
+      "crafting": {
+        "name": "crafting",
+        "type": "recipe-category"
+      },
+      "smelting": {
+        "name": "smelting",
+        "type": "recipe-category"
+      }
+    },
+    "resource": {
+      "coal": {
+        "collision_box": {
+          "1": {
+            "1": -0.1,
+            "2": -0.1
+          },
+          "2": {
+            "1": 0.1,
+            "2": 0.1
+          }
+        },
+        "default_generator_settings": {
+          "frequency": "frequent",
+          "richness": "very-good",
+          "size": "medium"
+        },
+        "flags": {
+          "1": "placeable-neutral"
+        },
+        "icon": "__base__/graphics/icons/coal.png",
+        "map_color": {
+          "b": 0.15,
+          "g": 0.233,
+          "r": 0.241
+        },
+        "minable": {
+          "hardness": 0.9,
+          "mining_particle": "coal-particle",
+          "mining_time": 2,
+          "result": "coal"
+        },
+        "name": "coal",
+        "selection_box": {
+          "1": {
+            "1": -0.5,
+            "2": -0.5
+          },
+          "2": {
+            "1": 0.5,
+            "2": 0.5
+          }
+        },
+        "stage_counts": {
+          "1": 1000,
+          "2": 600,
+          "3": 400,
+          "4": 200,
+          "5": 100,
+          "6": 50,
+          "7": 20,
+          "8": 1
+        },
+        "stages": {
+          "direction_count": 8,
+          "filename": "__base__/graphics/entity/coal/coal.png",
+          "frame_count": 4,
+          "frame_height": 38,
+          "frame_width": 38,
+          "priority": "extra-high"
+        },
+        "type": "resource"
+      },
+      "copper-ore": {
+        "collision_box": {
+          "1": {
+            "1": -0.1,
+            "2": -0.1
+          },
+          "2": {
+            "1": 0.1,
+            "2": 0.1
+          }
+        },
+        "default_generator_settings": {
+          "frequency": "frequent",
+          "richness": "good",
+          "size": "medium"
+        },
+        "flags": {
+          "1": "placeable-neutral"
+        },
+        "icon": "__base__/graphics/icons/copper-ore.png",
+        "map_color": {
+          "b": 0.215,
+          "g": 0.388,
+          "r": 0.803
+        },
+        "minable": {
+          "hardness": 0.9,
+          "mining_particle": "copper-ore-particle",
+          "mining_time": 2,
+          "result": "copper-ore"
+        },
+        "name": "copper-ore",
+        "selection_box": {
+          "1": {
+            "1": -0.5,
+            "2": -0.5
+          },
+          "2": {
+            "1": 0.5,
+            "2": 0.5
+          }
+        },
+        "stage_counts": {
+          "1": 1000,
+          "2": 600,
+          "3": 400,
+          "4": 200,
+          "5": 100,
+          "6": 50,
+          "7": 20,
+          "8": 1
+        },
+        "stages": {
+          "direction_count": 8,
+          "filename": "__base__/graphics/entity/copper-ore/copper-ore.png",
+          "frame_count": 4,
+          "frame_height": 38,
+          "frame_width": 38,
+          "priority": "extra-high"
+        },
+        "type": "resource"
+      },
+      "iron-ore": {
+        "collision_box": {
+          "1": {
+            "1": -0.1,
+            "2": -0.1
+          },
+          "2": {
+            "1": 0.1,
+            "2": 0.1
+          }
+        },
+        "default_generator_settings": {
+          "frequency": "frequent",
+          "richness": "good",
+          "size": "medium"
+        },
+        "flags": {
+          "1": "placeable-neutral"
+        },
+        "icon": "__base__/graphics/icons/iron-ore.png",
+        "map_color": {
+          "b": 0.427,
+          "g": 0.419,
+          "r": 0.337
+        },
+        "minable": {
+          "hardness": 0.9,
+          "mining_particle": "iron-ore-particle",
+          "mining_time": 2,
+          "result": "iron-ore"
+        },
+        "name": "iron-ore",
+        "selection_box": {
+          "1": {
+            "1": -0.5,
+            "2": -0.5
+          },
+          "2": {
+            "1": 0.5,
+            "2": 0.5
+          }
+        },
+        "stage_counts": {
+          "1": 1000,
+          "2": 600,
+          "3": 400,
+          "4": 200,
+          "5": 100,
+          "6": 50,
+          "7": 20,
+          "8": 1
+        },
+        "stages": {
+          "direction_count": 8,
+          "filename": "__base__/graphics/entity/iron-ore/iron-ore.png",
+          "frame_count": 4,
+          "frame_height": 38,
+          "frame_width": 38,
+          "priority": "extra-high"
+        },
+        "type": "resource"
+      },
+      "stone": {
+        "collision_box": {
+          "1": {
+            "1": -0.1,
+            "2": -0.1
+          },
+          "2": {
+            "1": 0.1,
+            "2": 0.1
+          }
+        },
+        "default_generator_settings": {
+          "frequency": "rare",
+          "richness": "regular",
+          "size": "small"
+        },
+        "flags": {
+          "1": "placeable-neutral"
+        },
+        "icon": "__base__/graphics/icons/stone.png",
+        "map_color": {
+          "b": 0.317,
+          "g": 0.45,
+          "r": 0.478
+        },
+        "minable": {
+          "hardness": 0.4,
+          "mining_particle": "stone-particle",
+          "mining_time": 2,
+          "result": "stone"
+        },
+        "name": "stone",
+        "selection_box": {
+          "1": {
+            "1": -0.5,
+            "2": -0.5
+          },
+          "2": {
+            "1": 0.5,
+            "2": 0.5
+          }
+        },
+        "stage_counts": {
+          "1": 1000,
+          "2": 600,
+          "3": 400,
+          "4": 200,
+          "5": 100,
+          "6": 50,
+          "7": 20,
+          "8": 1
+        },
+        "stages": {
+          "direction_count": 8,
+          "filename": "__base__/graphics/entity/stone/stone.png",
+          "frame_count": 4,
+          "frame_height": 38,
+          "frame_width": 38,
+          "priority": "extra-high"
+        },
+        "type": "resource"
+      }
+    },
+    "smoke": {
+      "smoke": {
+        "animation": {
+          "animation_speed": 12,
+          "filename": "__base__/graphics/entity/smoke/smoke.png",
+          "frame_count": 39,
+          "frame_height": 78,
+          "frame_width": 88,
+          "line_length": 7,
+          "priority": "extra-high"
+        },
+        "name": "smoke",
+        "type": "smoke"
+      },
+      "smoke-fast": {
+        "animation": {
+          "animation_speed": 1,
+          "filename": "__base__/graphics/entity/smoke-fast/smoke-fast.png",
+          "frame_count": 16,
+          "frame_height": 50,
+          "frame_width": 50,
+          "priority": "extra-high"
+        },
+        "name": "smoke-fast",
+        "type": "smoke"
+      }
+    },
+    "tile": {
+      "deepwater": {
+        "collision_mask": {
+          "1": "water-tile",
+          "2": "resource-layer",
+          "3": "item-layer",
+          "4": "player-layer"
+        },
+        "generator": {
+          "always_under_attitude": -250,
+          "layer": 1
+        },
+        "layer": 45,
+        "map_color": {
+          "b": 0.211,
+          "g": 0.25,
+          "r": 0.149
+        },
+        "name": "deepwater",
+        "type": "tile",
+        "variants": {
+          "inner_corner": {
+            "count": 1,
+            "picture": "__base__/graphics/terrain/deepwater-inner-corner.png"
+          },
+          "main": {
+            "count": 4,
+            "picture": "__base__/graphics/terrain/deepwater.png"
+          },
+          "outer_corner": {
+            "count": 1,
+            "picture": "__base__/graphics/terrain/deepwater-outer-corner.png"
+          },
+          "side": {
+            "count": 4,
+            "picture": "__base__/graphics/terrain/deepwater-side.png"
+          }
+        }
+      },
+      "dirt": {
+        "collision_mask": {
+          "1": "ground-tile"
+        },
+        "generator": {
+          "layer": 4,
+          "noise_layer": "dirt"
+        },
+        "layer": 25,
+        "map_color": {
+          "b": 0.117,
+          "g": 0.184,
+          "r": 0.243
+        },
+        "name": "dirt",
+        "type": "tile",
+        "variants": {
+          "inner_corner": {
+            "count": 1,
+            "picture": "__base__/graphics/terrain/dirt-inner-corner.png"
+          },
+          "main": {
+            "count": 4,
+            "picture": "__base__/graphics/terrain/dirt.png"
+          },
+          "outer_corner": {
+            "count": 1,
+            "picture": "__base__/graphics/terrain/dirt-outer-corner.png"
+          },
+          "side": {
+            "count": 4,
+            "picture": "__base__/graphics/terrain/dirt-side.png"
+          }
+        },
+        "walking_sound": {
+          "1": {
+            "filename": "__base__/sound/walking/dirt-02.wav",
+            "volume": 0.8
+          },
+          "2": {
+            "filename": "__base__/sound/walking/dirt-03.wav",
+            "volume": 0.8
+          },
+          "3": {
+            "filename": "__base__/sound/walking/dirt-04.wav",
+            "volume": 0.8
+          }
+        }
+      },
+      "grass": {
+        "collision_mask": {
+          "1": "ground-tile"
+        },
+        "generator": {
+          "layer": 3,
+          "noise_layer": "grass",
+          "persistence": 0.6,
+          "water_bounus_coefficient": 1
+        },
+        "layer": 20,
+        "map_color": {
+          "b": 0.141,
+          "g": 0.266,
+          "r": 0.392
+        },
+        "name": "grass",
+        "type": "tile",
+        "variants": {
+          "inner_corner": {
+            "count": 1,
+            "picture": "__base__/graphics/terrain/grass-inner-corner.png"
+          },
+          "main": {
+            "count": 4,
+            "picture": "__base__/graphics/terrain/grass.png"
+          },
+          "outer_corner": {
+            "count": 1,
+            "picture": "__base__/graphics/terrain/grass-outer-corner.png"
+          },
+          "side": {
+            "count": 4,
+            "picture": "__base__/graphics/terrain/grass-side.png"
+          }
+        },
+        "walking_sound": {
+          "1": {
+            "filename": "__base__/sound/walking/grass-01.wav",
+            "volume": 0.8
+          },
+          "2": {
+            "filename": "__base__/sound/walking/grass-02.wav",
+            "volume": 0.8
+          },
+          "3": {
+            "filename": "__base__/sound/walking/grass-03.wav",
+            "volume": 0.8
+          },
+          "4": {
+            "filename": "__base__/sound/walking/grass-04.wav",
+            "volume": 0.8
+          }
+        }
+      },
+      "hills": {
+        "collision_mask": {
+          "1": "ground-tile"
+        },
+        "generator": {
+          "layer": 5,
+          "noise_layer": "hills"
+        },
+        "layer": 30,
+        "map_color": {
+          "b": 0.098,
+          "g": 0.156,
+          "r": 0.2
+        },
+        "name": "hills",
+        "type": "tile",
+        "variants": {
+          "inner_corner": {
+            "count": 1,
+            "picture": "__base__/graphics/terrain/hills-inner-corner.png"
+          },
+          "main": {
+            "count": 4,
+            "picture": "__base__/graphics/terrain/hills.png"
+          },
+          "outer_corner": {
+            "count": 1,
+            "picture": "__base__/graphics/terrain/hills-outer-corner.png"
+          },
+          "side": {
+            "count": 4,
+            "picture": "__base__/graphics/terrain/hills-side.png"
+          }
+        },
+        "walking_sound": {
+          "1": {
+            "filename": "__base__/sound/walking/dirt-02.wav",
+            "volume": 0.8
+          },
+          "2": {
+            "filename": "__base__/sound/walking/dirt-03.wav",
+            "volume": 0.8
+          },
+          "3": {
+            "filename": "__base__/sound/walking/dirt-04.wav",
+            "volume": 0.8
+          }
+        }
+      },
+      "out-of-map": {
+        "collision_mask": {
+          "1": "ground-tile",
+          "2": "water-tile",
+          "3": "resource-layer",
+          "4": "floor-layer",
+          "5": "item-layer",
+          "6": "object-layer",
+          "7": "player-layer"
+        },
+        "layer": 60,
+        "map_color": {
+          "b": 0,
+          "g": 0,
+          "r": 0
+        },
+        "name": "out-of-map",
+        "type": "tile",
+        "variants": {
+          "inner_corner": {
+            "count": 0,
+            "picture": "__base__/graphics/terrain/out-of-map-inner-corner.png"
+          },
+          "main": {
+            "count": 1,
+            "picture": "__base__/graphics/terrain/out-of-map.png"
+          },
+          "outer_corner": {
+            "count": 0,
+            "picture": "__base__/graphics/terrain/out-of-map-outer-corner.png"
+          },
+          "side": {
+            "count": 0,
+            "picture": "__base__/graphics/terrain/out-of-map-side.png"
+          }
+        }
+      },
+      "sand": {
+        "collision_mask": {
+          "1": "ground-tile"
+        },
+        "generator": {
+          "layer": 6,
+          "noise_layer": "sand",
+          "water_bounus_coefficient": -1
+        },
+        "layer": 35,
+        "map_color": {
+          "b": 0.105,
+          "g": 0.105,
+          "r": 0.113
+        },
+        "name": "sand",
+        "type": "tile",
+        "variants": {
+          "inner_corner": {
+            "count": 1,
+            "picture": "__base__/graphics/terrain/sand-inner-corner.png"
+          },
+          "main": {
+            "count": 4,
+            "picture": "__base__/graphics/terrain/sand.png"
+          },
+          "outer_corner": {
+            "count": 1,
+            "picture": "__base__/graphics/terrain/sand-outer-corner.png"
+          },
+          "side": {
+            "count": 4,
+            "picture": "__base__/graphics/terrain/sand-side.png"
+          }
+        },
+        "walking_sound": {
+          "1": {
+            "filename": "__base__/sound/walking/sand-01.wav",
+            "volume": 0.8
+          },
+          "2": {
+            "filename": "__base__/sound/walking/sand-02.wav",
+            "volume": 0.8
+          },
+          "3": {
+            "filename": "__base__/sound/walking/sand-03.wav",
+            "volume": 0.8
+          },
+          "4": {
+            "filename": "__base__/sound/walking/sand-04.wav",
+            "volume": 0.8
+          }
+        }
+      },
+      "water": {
+        "collision_mask": {
+          "1": "water-tile",
+          "2": "item-layer",
+          "3": "resource-layer",
+          "4": "player-layer"
+        },
+        "generator": {
+          "always_under_attitude": 0,
+          "layer": 2
+        },
+        "layer": 40,
+        "map_color": {
+          "b": 0.282,
+          "g": 0.333,
+          "r": 0.227
+        },
+        "name": "water",
+        "type": "tile",
+        "variants": {
+          "inner_corner": {
+            "count": 1,
+            "picture": "__base__/graphics/terrain/water-inner-corner.png"
+          },
+          "main": {
+            "count": 4,
+            "picture": "__base__/graphics/terrain/water.png"
+          },
+          "outer_corner": {
+            "count": 1,
+            "picture": "__base__/graphics/terrain/water-outer-corner.png"
+          },
+          "side": {
+            "count": 4,
+            "picture": "__base__/graphics/terrain/water-side.png"
+          }
+        }
+      }
+    },
+    "transport-belt": {
+      "basic-transport-belt": {
+        "animation_speed_coefficient": 64,
+        "animations": {
+          "direction_count": 12,
+          "filename": "__base__/graphics/entity/basic-transport-belt/basic-transport-belt.png",
+          "frame_count": 32,
+          "frame_height": 32,
+          "frame_width": 32,
+          "priority": "extra-high"
+        },
+        "collision_box": {
+          "1": {
+            "1": -0.4,
+            "2": -0.4
+          },
+          "2": {
+            "1": 0.4,
+            "2": 0.4
+          }
+        },
+        "fast_replaceable_group": "transport-belt",
+        "flags": {
+          "1": "placeable-neutral",
+          "2": "player-creation"
+        },
+        "icon": "__base__/graphics/icons/basic-transport-belt.png",
+        "max_health": 10,
+        "minable": {
+          "hardness": 0.2,
+          "mining_time": 0.3,
+          "result": "basic-transport-belt"
+        },
+        "name": "basic-transport-belt",
+        "selection_box": {
+          "1": {
+            "1": -0.5,
+            "2": -0.5
+          },
+          "2": {
+            "1": 0.5,
+            "2": 0.5
+          }
+        },
+        "speed": 0.03125,
+        "type": "transport-belt"
+      }
+    },
+    "tree": {
+      "big-tree": {
+        "autoplace": {
+          "influence": 0.4,
+          "noise_influence": 0.9,
+          "noise_layer": "trees",
+          "noise_persistence": 0.5,
+          "sharpness": 0.5,
+          "water_max_range": 0.2,
+          "water_optimal": 0.2,
+          "water_range": 0.1
+        },
+        "collision_box": {
+          "1": {
+            "1": -0.7,
+            "2": -0.8
+          },
+          "2": {
+            "1": 0.7,
+            "2": 0.8
+          }
+        },
+        "drawing_box": {
+          "1": {
+            "1": -0.8,
+            "2": -2.8
+          },
+          "2": {
+            "1": 0.8,
+            "2": 0.8
+          }
+        },
+        "flags": {
+          "1": "placeable-neutral",
+          "2": "placeable-off-grid"
+        },
+        "icon": "__base__/graphics/icons/big-tree.png",
+        "max_health": 10,
+        "minable": {
+          "count": 5,
+          "mining_particle": "wooden-particle",
+          "mining_time": 2,
+          "result": "raw-wood"
+        },
+        "name": "big-tree",
+        "pictures": {
+          "1": {
+            "filename": "__base__/graphics/entity/big-tree/big-tree-01.png",
+            "height": 118,
+            "priority": "extra-high",
+            "shift": {
+              "1": 1.1,
+              "2": -1
+            },
+            "width": 155
+          },
+          "10": {
+            "filename": "__base__/graphics/entity/big-tree/big-tree-10.png",
+            "height": 129,
+            "priority": "extra-high",
+            "shift": {
+              "1": 1.1,
+              "2": -1.1
+            },
+            "width": 196
+          },
+          "11": {
+            "filename": "__base__/graphics/entity/big-tree/big-tree-11.png",
+            "height": 129,
+            "priority": "extra-high",
+            "shift": {
+              "1": 1.3,
+              "2": -1.4
+            },
+            "width": 196
+          },
+          "12": {
+            "filename": "__base__/graphics/entity/big-tree/big-tree-12.png",
+            "height": 164,
+            "priority": "extra-high",
+            "shift": {
+              "1": 1.6,
+              "2": -1.2
+            },
+            "width": 175
+          },
+          "2": {
+            "filename": "__base__/graphics/entity/big-tree/big-tree-02.png",
+            "height": 169,
+            "priority": "extra-high",
+            "shift": {
+              "1": 1.2,
+              "2": -0.8
+            },
+            "width": 144
+          },
+          "3": {
+            "filename": "__base__/graphics/entity/big-tree/big-tree-03.png",
+            "height": 131,
+            "priority": "extra-high",
+            "shift": {
+              "1": 0.8,
+              "2": -0.7
+            },
+            "width": 151
+          },
+          "4": {
+            "filename": "__base__/graphics/entity/big-tree/big-tree-04.png",
+            "height": 131,
+            "priority": "extra-high",
+            "shift": {
+              "1": 2,
+              "2": -1
+            },
+            "width": 167
+          },
+          "5": {
+            "filename": "__base__/graphics/entity/big-tree/big-tree-05.png",
+            "height": 154,
+            "priority": "extra-high",
+            "shift": {
+              "1": 1.5,
+              "2": -1.7
+            },
+            "width": 156
+          },
+          "6": {
+            "filename": "__base__/graphics/entity/big-tree/big-tree-06.png",
+            "height": 111,
+            "priority": "extra-high",
+            "shift": {
+              "1": 0.7,
+              "2": -0.9
+            },
+            "width": 113
+          },
+          "7": {
+            "filename": "__base__/graphics/entity/big-tree/big-tree-07.png",
+            "height": 125,
+            "priority": "extra-high",
+            "shift": {
+              "1": 1,
+              "2": -0.7
+            },
+            "width": 116
+          },
+          "8": {
+            "filename": "__base__/graphics/entity/big-tree/big-tree-08.png",
+            "height": 129,
+            "priority": "extra-high",
+            "shift": {
+              "1": 1.4,
+              "2": -1.3
+            },
+            "width": 162
+          },
+          "9": {
+            "filename": "__base__/graphics/entity/big-tree/big-tree-09.png",
+            "height": 164,
+            "priority": "extra-high",
+            "shift": {
+              "1": 1.7,
+              "2": -1.1
+            },
+            "width": 156
+          }
+        },
+        "selection_box": {
+          "1": {
+            "1": -0.8,
+            "2": -2.2
+          },
+          "2": {
+            "1": 0.8,
+            "2": 0.8
+          }
+        },
+        "type": "tree"
+      },
+      "dry-tree": {
+        "autoplace": {
+          "peaks": {
+            "1": {
+              "influence": 0.11,
+              "noise_influence": 0.11,
+              "noise_layer": "dry-trees",
+              "noise_persistence": 0.9,
+              "water_max_range": 0.2,
+              "water_optimal": 0.05,
+              "water_range": 0
+            },
+            "2": {
+              "influence": 0.15,
+              "noise_influence": 0.2,
+              "noise_layer": "trees",
+              "noise_persistence": 0.5,
+              "water_max_range": 0.2,
+              "water_optimal": 0.2,
+              "water_range": 0.1
+            }
+          },
+          "sharpness": 0.2
+        },
+        "collision_box": {
+          "1": {
+            "1": -0.4,
+            "2": -0.4
+          },
+          "2": {
+            "1": 0.4,
+            "2": 0.4
+          }
+        },
+        "flags": {
+          "1": "placeable-neutral",
+          "2": "placeable-off-grid"
+        },
+        "icon": "__base__/graphics/icons/dry-tree.png",
+        "max_health": 10,
+        "minable": {
+          "mining_particle": "wooden-particle",
+          "mining_time": 1,
+          "result": "raw-wood"
+        },
+        "name": "dry-tree",
+        "pictures": {
+          "1": {
+            "filename": "__base__/graphics/entity/tree/tree-a01.png",
+            "height": 64,
+            "priority": "extra-high",
+            "shift": {
+              "1": 0.7,
+              "2": -0.7
+            },
+            "width": 84
+          },
+          "2": {
+            "filename": "__base__/graphics/entity/tree/tree-a02.png",
+            "height": 85,
+            "priority": "extra-high",
+            "shift": {
+              "1": 0.9,
+              "2": -0.6
+            },
+            "width": 96
+          },
+          "3": {
+            "filename": "__base__/graphics/entity/tree/tree-a03.png",
+            "height": 84,
+            "priority": "extra-high",
+            "shift": {
+              "1": 0,
+              "2": -0.7
+            },
+            "width": 88
+          },
+          "4": {
+            "filename": "__base__/graphics/entity/tree/tree-a04.png",
+            "height": 82,
+            "priority": "extra-high",
+            "shift": {
+              "1": 0.7,
+              "2": -0.6
+            },
+            "width": 85
+          },
+          "5": {
+            "filename": "__base__/graphics/entity/tree/tree-a05.png",
+            "height": 81,
+            "priority": "extra-high",
+            "shift": {
+              "1": 0.2,
+              "2": -0.8
+            },
+            "width": 95
+          },
+          "6": {
+            "filename": "__base__/graphics/entity/tree/tree-a06.png",
+            "height": 68,
+            "priority": "extra-high",
+            "shift": {
+              "1": 0,
+              "2": -0.6
+            },
+            "width": 91
+          },
+          "7": {
+            "filename": "__base__/graphics/entity/tree/tree-a07.png",
+            "height": 78,
+            "priority": "extra-high",
+            "shift": {
+              "1": 0.5,
+              "2": -0.8
+            },
+            "width": 92
+          },
+          "8": {
+            "filename": "__base__/graphics/entity/tree/tree-a08.png",
+            "height": 94,
+            "priority": "extra-high",
+            "shift": {
+              "1": 0.5,
+              "2": -0.8
+            },
+            "width": 105
+          }
+        },
+        "selection_box": {
+          "1": {
+            "1": -0.6,
+            "2": -1.5
+          },
+          "2": {
+            "1": 0.5,
+            "2": 0.4
+          }
+        },
+        "type": "tree"
+      }
+    },
+    "unit": {
+      "creeper": {
+        "attack_animation": {
+          "direction_count": 9,
+          "filename": "__base__/graphics/entity/creeper/creeper-attack.png",
+          "frame_count": 15,
+          "frame_height": 96,
+          "frame_width": 63,
+          "priority": "high",
+          "shift": {
+            "1": 0.421875,
+            "2": -0.53125
+          }
+        },
+        "attack_cooldown": 0.35,
+        "collision_box": {
+          "1": {
+            "1": -0.2,
+            "2": -0.4
+          },
+          "2": {
+            "1": 0.2,
+            "2": 0
+          }
+        },
+        "corpse": "creeper-corpse",
+        "damage": 6,
+        "distance_per_frame": 0.1,
+        "dying_sound": {
+          "1": {
+            "filename": "__base__/sound/creeper-death-1.wav",
+            "volume": 0.7
+          },
+          "2": {
+            "filename": "__base__/sound/creeper-death-2.wav",
+            "volume": 0.7
+          },
+          "3": {
+            "filename": "__base__/sound/creeper-death-3.wav",
+            "volume": 0.7
+          },
+          "4": {
+            "filename": "__base__/sound/creeper-death-4.wav",
+            "volume": 0.7
+          }
+        },
+        "flags": {
+          "1": "placeable-player",
+          "2": "placeable-enemy",
+          "3": "placeable-off-grid"
+        },
+        "icon": "__base__/graphics/icons/creeper.png",
+        "max_health": 15,
+        "movement_speed": 0.15,
+        "name": "creeper",
+        "regenerate_rate": 0.01,
+        "run_animation": {
+          "direction_count": 9,
+          "filename": "__base__/graphics/entity/creeper/creeper-run.png",
+          "frame_count": 30,
+          "frame_height": 68,
+          "frame_width": 48,
+          "priority": "high",
+          "shift": {
+            "1": 0,
+            "2": -0.75
+          }
+        },
+        "selection_box": {
+          "1": {
+            "1": -0.7,
+            "2": -1.5
+          },
+          "2": {
+            "1": 0.7,
+            "2": 0.3
+          }
+        },
+        "type": "unit"
+      }
+    },
+    "unit-spawner": {
+      "creeper-spawner": {
+        "collision_box": {
+          "1": {
+            "1": -1.4,
+            "2": -1.4
+          },
+          "2": {
+            "1": 1.4,
+            "2": 1.4
+          }
+        },
+        "count_of_units_around": 7,
+        "dying_explosion": "huge-explosion",
+        "flags": {
+          "1": "placeable-player",
+          "2": "placeable-enemy"
+        },
+        "icon": "__base__/graphics/icons/creeper-spawner.png",
+        "loot": {
+          "1": {
+            "count_max": 10,
+            "count_min": 2,
+            "item": "alien-artifact",
+            "probability": 1
+          }
+        },
+        "max_health": 150,
+        "maximum_count_of_owned_units": 15,
+        "minable": {
+          "mining_time": 1,
+          "result": "creeper-spawner"
+        },
+        "name": "creeper-spawner",
+        "picture": {
+          "filename": "__base__/graphics/entity/creeper-spawner/creeper-spawner.png",
+          "height": 101,
+          "priority": "high",
+          "width": 87
+        },
+        "result_unit": "creeper",
+        "selection_box": {
+          "1": {
+            "1": -1.5,
+            "2": -1.5
+          },
+          "2": {
+            "1": 1.5,
+            "2": 1.5
+          }
+        },
+        "spawning_cooldown": 180,
+        "spawning_radius": 10,
+        "spawning_spacing": 3,
+        "type": "unit-spawner"
+      }
+    }
+  }
+}
