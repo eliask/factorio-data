@@ -1,0 +1,40 @@
+language: node_js
+node_js:
+  - 6
+
+branches:
+  except:
+    - gh-pages
+
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - lua5.1-dev
+      - g++-4.8
+
+before_install:
+  - 'if [ ${TRAVIS_SECURE_ENV_VARS} = "true" ]; then
+      openssl aes-256-cbc -K $encrypted_95a780e7e1dc_key -iv $encrypted_95a780e7e1dc_iv -in id_rsa.enc -out id_rsa -d;
+    fi'
+  - export CXX=g++-4.8
+  - $CXX --version
+
+env:
+  global:
+    - DEPLOY_BRANCH="master"
+    - SOURCE_DIR="docs"
+    - TARGET_BRANCH="gh-pages"
+    - SSH_KEY="id_rsa"
+    - GIT_NAME="RoboLenny"
+    - GIT_EMAIL="robot@codelenny.com"
+
+script:
+  - node test/assets/download-headless-data.js
+  - npm run lint
+  - npm run unit-test
+  - npm run-script docs
+  - '"$(npm bin)/gh-pages-travis"'
+
+after_success: npm run coverage
