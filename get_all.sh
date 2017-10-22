@@ -25,12 +25,12 @@ extract() {
   ' < "$1"
 }
 
-curl -L \
+curl -fsL \
   https://www.factorio.com/download-headless/stable \
   https://www.factorio.com/download-headless/experimental \
   | pup -p 'a[href*=linux] attr{href}' \
   | while read -r version_url; do
-  version=$(sed 's#.*/\([0-9.]\+\)/.*#\1#' <<< "$version_url")
+  version=$(sed 's#.*/\([0-9.]\{3,\}\)/.*#\1#' <<< "$version_url")
   url=https://www.factorio.com/${version_url}
 
   versions_path=$PWD/versions
@@ -45,7 +45,7 @@ curl -L \
     echo "File exists already: $version"
   else
     tar_path=$(mktemp)
-    curl -L "$url" > "$tar_path"
+    curl -fL "$url" > "$tar_path"
     cleanup() { rm -f "$tar_path"; }
     trap cleanup EXIT
     extract "$tar_path" | jq -S . > "$extracted_data"
